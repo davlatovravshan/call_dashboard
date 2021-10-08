@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54.517" height="54.517" viewBox="0 0 54.517 54.517">
+  <defs>
+    <filter id="Ellipse_117" x="0" y="0" width="54.517" height="54.517" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="jami" transform="translate(-313.101 -148.608)">
+    <g transform="matrix(1, 0, 0, 1, 313.1, 148.61)" filter="url(#Ellipse_117)">
+      <g id="Ellipse_117-2" data-name="Ellipse 117" transform="translate(9 6)" fill="#fff" stroke="#628ce8" stroke-width="2">
+        <ellipse cx="18.258" cy="18.258" rx="18.258" ry="18.258" stroke="none"/>
+        <ellipse cx="18.258" cy="18.258" rx="17.258" ry="17.258" fill="none"/>
+      </g>
+    </g>
+    <g id="Checklist_2_" transform="translate(332.116 163.155)">
+      <path id="Path_1275" data-name="Path 1275" d="M259.94,302a3.94,3.94,0,1,0,3.94,3.94A3.945,3.945,0,0,0,259.94,302Zm1.524,3.494-1.689,1.689a.563.563,0,0,1-.8,0l-.844-.844a.563.563,0,0,1,.8-.8l.446.446,1.291-1.291a.563.563,0,1,1,.8.8Z" transform="translate(-248.119 -290.667)" fill="#628ce8"/>
+      <path id="Path_1276" data-name="Path 1276" d="M57.821,0H46.563A.563.563,0,0,0,46,.563V16.4a.563.563,0,0,0,.563.563h6.493c0-.006-.005-.011-.007-.017a4.645,4.645,0,0,1-.294-1.672,5.072,5.072,0,0,1,5.066-5.066,4.959,4.959,0,0,1,.563.057V.563A.563.563,0,0,0,57.821,0ZM48.814,11.333a.563.563,0,1,1,.563-.563A.563.563,0,0,1,48.814,11.333Zm0-2.252a.563.563,0,1,1,.563-.563A.563.563,0,0,1,48.814,9.081Zm0-2.252a.563.563,0,1,1,.563-.563A.563.563,0,0,1,48.814,6.83Zm0-2.252a.563.563,0,1,1,.563-.563A.563.563,0,0,1,48.814,4.578Zm4.5,6.755H51.066a.563.563,0,0,1,0-1.126h2.252a.563.563,0,0,1,0,1.126Zm2.252-2.252h-4.5a.563.563,0,0,1,0-1.126h4.5a.563.563,0,0,1,0,1.126Zm0-2.252h-4.5a.563.563,0,0,1,0-1.126h4.5a.563.563,0,0,1,0,1.126Zm0-2.252h-4.5a.563.563,0,0,1,0-1.126h4.5a.563.563,0,0,1,0,1.126Z" transform="translate(-46)" fill="#628ce8"/>
+    </g>
+  </g>
+</svg>

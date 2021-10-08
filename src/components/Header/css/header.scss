@@ -1,0 +1,23 @@
+.header__row {
+  padding: 20px 0 20px 0;
+  background-color: #FFFFFF;
+
+  .header__top {
+    text-align: left;
+    padding-left: 85px;
+
+    h1 {
+      font-size: 28px;
+      color: #000000;
+      text-transform: uppercase;
+      font-weight: 400;
+      line-height: 100%;
+      margin: 0;
+
+      span {
+        font-weight: 700;
+        color: #0E3EA8;
+      }
+    }
+  }
+}

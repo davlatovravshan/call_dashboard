@@ -1,0 +1,189 @@
+
+.container__saidbar {
+  width: 75px;
+  //width: 200px;
+  background-color: #0D41AE;
+  border-radius: 0 10px 0 0;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  animation: width 50s ease-in-out;
+
+  .saidbar__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    .saidbar__row-top {
+      .saidbar__logo {
+        padding: 35px 12px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        cursor: pointer;
+
+        .line {
+          background-color: #FFFFFF;
+          border-radius: 2px;
+          height: 3px;
+          display: block;
+
+          &:not(:last-child) {
+            margin-bottom: 5px;
+          }
+        }
+
+        .line__large {
+          width: 20px;
+        }
+
+        .line__middle {
+          width: 15px;
+        }
+
+        .line__small {
+          width: 10px;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 10px;
+          width: 55px;
+          height: 1px;
+          background-color: #fff;
+        }
+      }
+
+      .saidbar__menu {
+        margin-top: 40px;
+
+        .saidbar__menu-nav {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          .saidbar__menu-li {
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            .saidbar__menu-link {
+              display: flex;
+              align-items: center;
+              text-decoration: none;
+
+              p {
+                font-size: 14px;
+                color: #FFFFFF;
+                font-weight: 300;
+                width: 105px;
+                margin-left: 20px;
+                display: none;
+              }
+
+              img {
+                width: 25px;
+                height: 20px;
+              }
+            }
+
+            &:hover {
+              background-color: #002B82;
+              cursor: pointer;
+
+              &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 5px;
+                height: 100%;
+                background-color: #2B65DC;
+              }
+            }
+
+          }
+        }
+      }
+    }
+
+    .saidbar__row-bottom {
+      padding-bottom: 50px;
+
+      .saidbar__date {
+        .saidbar__date-title {
+          .date__title {
+            font-size: 14px;
+            line-height: 18px;
+            color: #FFFFFF;
+            font-weight: 300;
+            text-align: left;
+            margin: 0 0 0 10px;
+          }
+        }
+
+        .saidbar__date-input {
+          margin: 5px 5px 0 5px;
+          display: flex;
+          align-items: center;
+
+          .date__input {
+            font-size: 12px;
+            border-radius: 16px;
+            border: none;
+            background-color: #FFFFFF;
+            width: 100%;
+            padding: 5px;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+
+
+  &:hover {
+    width: 200px;
+    cursor: pointer;
+
+    .saidbar__menu {
+      .saidbar__menu-nav {
+        .saidbar__menu-li {
+          .saidbar__menu-link {
+            p {
+              display: block !important;
+            }
+          }
+        }
+      }
+    }
+
+    .saidbar__row-top {
+      .saidbar__logo {
+        padding: 35px 20px;
+        align-items: flex-end;
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 10px;
+          width: 170px;
+          height: 1px;
+          background-color: #fff;
+        }
+      }
+
+    }
+  }
+}
+
