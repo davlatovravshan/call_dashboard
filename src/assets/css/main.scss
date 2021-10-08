@@ -20,44 +20,6 @@ body {
 }
 
 
-.blue__orange {
-  color: #DB6E26;
-}
-
-
-.left__info-box-block {
-  width: 1745px !important;
-  //transition: width .1s ease-in;
-
-  .arrow__left-box {
-    position: absolute;
-    right: -20px;
-    top: 40%;
-    cursor: pointer;
-
-    .img__close {
-      transform: rotateY(180deg);
-    }
-  }
-}
-
-
-.item__block {
-  display: block !important;
-}
-
-
-.crime__items-active {
-  width: 69% !important;
-  animation: width 1s ease-in !important;
-
-  .arrow__center {
-    img {
-      transform: rotateY(180deg);
-    }
-  }
-}
-
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
