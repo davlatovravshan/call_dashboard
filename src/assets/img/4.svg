@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="61" height="61" viewBox="0 0 61 61">
+  <defs>
+    <filter id="_4" x="0" y="0" width="61" height="61" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.361"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="_4-2" data-name="4" transform="translate(-1026 -953)">
+    <g id="Group_2744" data-name="Group 2744">
+      <circle id="_4-3" data-name="4" cx="25.5" cy="25.5" r="25.5" transform="translate(1031 955)" fill="#cc5151"/>
+      <g transform="matrix(1, 0, 0, 1, 1026, 953)" filter="url(#_4)">
+        <circle id="_4-4" data-name="4" cx="21.5" cy="21.5" r="21.5" transform="translate(9 6)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Group_2166" data-name="Group 2166" transform="translate(-56 -7.544)">
+      <g id="Group_2163" data-name="Group 2163" transform="translate(106 -15)">
+        <g id="Group_2162" data-name="Group 2162" transform="translate(0 68.439)">
+          <g id="Group_1877" data-name="Group 1877" transform="translate(176.048 213.105)">
+            <g id="Group_1867" data-name="Group 1867">
+              <g id="phone-call" transform="translate(816.952 710)">
+                <path id="Path_1283" data-name="Path 1283" d="M21.406,21.406V19.044a2.282,2.282,0,0,0-2.085-2.285,15.09,15.09,0,0,1-4.126-.993L13.86,16.845A16.163,16.163,0,0,1,5.667,8.083l1.122-1.4a14.609,14.609,0,0,1-.673-4.392A2.3,2.3,0,0,0,3.823,0H.134C.061.956,0,1.619,0,2.294A20.651,20.651,0,0,0,19.877,22.9C20.031,22.9,21.363,22.425,21.406,21.406Z" transform="translate(0 0)" fill="#cc5151"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="Page-1" transform="translate(1101.731 979.905)">
+        <g id="_067---missed-call" data-name="067---missed-call" transform="translate(7.972)">
+          <path id="Shape" d="M24.379,0,18.034.7l2.042,2.042-3.44,3.44L10.813,1.011A1.1,1.1,0,1,0,9.351,2.655l6.6,5.865a1.1,1.1,0,0,0,1.508-.044L21.631,4.3l2.042,2.042Z" transform="translate(-8.972)" fill="#cc5151"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
