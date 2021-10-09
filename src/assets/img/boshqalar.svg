@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54.517" height="54.517" viewBox="0 0 54.517 54.517">
+  <defs>
+    <filter id="Ellipse_131" x="0" y="0" width="54.517" height="54.517" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="boshqalar" transform="translate(-841.483 -148.605)">
+    <g transform="matrix(1, 0, 0, 1, 841.48, 148.6)" filter="url(#Ellipse_131)">
+      <g id="Ellipse_131-2" data-name="Ellipse 131" transform="translate(9 6)" fill="#fff" stroke="#628ce8" stroke-width="2">
+        <ellipse cx="18.258" cy="18.258" rx="18.258" ry="18.258" stroke="none"/>
+        <ellipse cx="18.258" cy="18.258" rx="17.258" ry="17.258" fill="none"/>
+      </g>
+    </g>
+    <g id="rectangles" transform="translate(859.076 164.573)">
+      <path id="Path_1280" data-name="Path 1280" d="M12.873,34.623V33.074a1.356,1.356,0,0,0-1.356-1.356H1.356A1.356,1.356,0,0,0,0,33.074v5.206a1.356,1.356,0,0,0,1.356,1.356h1V37a2.375,2.375,0,0,1,2.372-2.372Z" transform="translate(0 -31.718)" fill="#4f76cb"/>
+      <path id="Path_1281" data-name="Path 1281" d="M62.649,92.531V90.982a1.356,1.356,0,0,0-1.356-1.356H51.132a1.356,1.356,0,0,0-1.356,1.356v5.206a1.356,1.356,0,0,0,1.356,1.356h1.441V94.9a2.375,2.375,0,0,1,2.372-2.372Z" transform="translate(-46.405 -85.705)" fill="#4f76cb"/>
+      <path id="Path_1282" data-name="Path 1282" d="M117.6,147.533h-10.16a1.357,1.357,0,0,0-1.356,1.356V154.1a1.356,1.356,0,0,0,1.356,1.356H117.6a1.356,1.356,0,0,0,1.356-1.356v-5.206A1.356,1.356,0,0,0,117.6,147.533Z" transform="translate(-98.903 -139.691)" fill="#4f76cb"/>
+    </g>
+  </g>
+</svg>

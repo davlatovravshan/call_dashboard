@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="769.5" height="164" viewBox="0 0 769.5 164">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#5c86e2"/>
+      <stop offset="1" stop-color="#1b4298"/>
+    </linearGradient>
+  </defs>
+  <g id="week" transform="translate(-184 -468)">
+    <g id="DDD">
+      <text id="_200" data-name="200" transform="translate(184 613)" fill="#5c86e2" font-size="11" font-family="Montserrat-SemiBold, Montserrat" font-weight="600"><tspan x="0" y="0">200</tspan></text>
+      <g id="DDDD">
+        <g id="_4D" data-name="4D">
+          <text id="_9" data-name="9" transform="translate(321 630)" font-size="8" font-family="Montserrat-SemiBold, Montserrat" font-weight="600"><tspan x="0" y="0">9</tspan></text>
+          <text id="_8" data-name="8" transform="translate(272.066 630)" font-size="8" font-family="Montserrat-SemiBold, Montserrat" font-weight="600"><tspan x="0" y="0">8</tspan></text>
+          <text id="_7" data-name="7" transform="translate(224.5 630)" font-size="8" font-family="Montserrat-SemiBold, Montserrat" font-weight="600"><tspan x="0" y="0">7</tspan></text>
+          <text id="_1" data-name="1" transform="translate(375 628)" font-size="8" font-family="Montserrat-SemiBold, Montserrat" font-weight="600"><tspan x="0" y="0">1</tspan></text>
+          <text id="_1-2" data-name="1" transform="translate(476 628)" font-size="8" font-family="Montserrat-SemiBold, Montserrat" font-weight="600"><tspan x="0" y="0">1</tspan></text>
+          <text id="_1-3" data-name="1" transform="translate(425 628)" font-size="8" font-family="Montserrat-SemiBold, Montserrat" font-weight="600"><tspan x="0" y="0">1</tspan></text>
+          <text id="_1-4" data-name="1" transform="translate(526 628)" font-size="8" font-family="Montserrat-SemiBold, Montserrat" font-weight="600"><tspan x="0" y="0">1</tspan></text>
+          <text id="_1-5" data-name="1" transform="translate(577 628)" font-size="8" font-family="Montserrat-SemiBold, Montserrat" font-weight="600"><tspan x="0" y="0">1</tspan></text>
+          <text id="_1-6" data-name="1" transform="translate(627 628)" font-size="8" font-family="Montserrat-SemiBold, Montserrat" font-weight="600"><tspan x="0" y="0">1</tspan></text>
+          <text id="_1-7" data-name="1" transform="translate(679 628)" font-size="8" font-family="Montserrat-SemiBold, Montserrat" font-weight="600"><tspan x="0" y="0">1</tspan></text>
+          <text id="_1-8" data-name="1" transform="translate(729 628)" font-size="8" font-family="Montserrat-SemiBold, Montserrat" font-weight="600"><tspan x="0" y="0">1</tspan></text>
+          <text id="_1-9" data-name="1" transform="translate(780 628)" font-size="8" font-family="Montserrat-SemiBold, Montserrat" font-weight="600"><tspan x="0" y="0">1</tspan></text>
+          <text id="_20" data-name="20" transform="translate(830 630)" font-size="8" font-family="Montserrat-SemiBold, Montserrat" font-weight="600"><tspan x="0" y="0">20</tspan></text>
+          <text id="_2" data-name="2" transform="translate(888 630)" font-size="8" font-family="Montserrat-SemiBold, Montserrat" font-weight="600"><tspan x="0" y="0">2</tspan></text>
+        </g>
+        <g id="_3D" data-name="3D">
+          <text id="_400" data-name="400" transform="translate(184 585)" fill="#5c86e2" font-size="11" font-family="Montserrat-SemiBold, Montserrat" font-weight="600"><tspan x="0" y="0">400</tspan></text>
+          <text id="_600" data-name="600" transform="translate(184 552)" fill="#5c86e2" font-size="11" font-family="Montserrat-SemiBold, Montserrat" font-weight="600"><tspan x="0" y="0">600</tspan></text>
+          <text id="_800" data-name="800" transform="translate(184 525)" fill="#5c86e2" font-size="11" font-family="Montserrat-SemiBold, Montserrat" font-weight="600"><tspan x="0" y="0">800</tspan></text>
+          <text id="_1000" data-name="1000" transform="translate(184 494)" fill="#5c86e2" font-size="11" font-family="Montserrat-SemiBold, Montserrat" font-weight="600"><tspan x="0" y="0">1000</tspan></text>
+        </g>
+        <g id="_2D" data-name="2D">
+          <line id="Line_369" data-name="Line 369" x2="726.351" transform="translate(219.648 581.455)" fill="none" stroke="#d5d5d5" stroke-width="1" stroke-dasharray="2"/>
+          <line id="Line_385" data-name="Line 385" x2="726.351" transform="translate(219.648 548.95)" fill="none" stroke="#d5d5d5" stroke-width="1" stroke-dasharray="2"/>
+          <line id="Line_386" data-name="Line 386" x2="726.351" transform="translate(219.648 520.41)" fill="none" stroke="#d5d5d5" stroke-width="1" stroke-dasharray="2"/>
+        </g>
+        <g id="_1D" data-name="1D">
+          <rect id="Rectangle_1893" data-name="Rectangle 1893" width="20" height="40" transform="translate(217 572)" fill="url(#linear-gradient)"/>
+          <rect id="Rectangle_1894" data-name="Rectangle 1894" width="20" height="57" transform="translate(265 555)" fill="url(#linear-gradient)"/>
+          <rect id="Rectangle_1896" data-name="Rectangle 1896" width="20" height="60" transform="translate(367 552)" fill="url(#linear-gradient)"/>
+          <rect id="Rectangle_1899" data-name="Rectangle 1899" width="20" height="83" transform="translate(517 529)" fill="url(#linear-gradient)"/>
+          <rect id="Rectangle_1902" data-name="Rectangle 1902" width="20" height="53" transform="translate(669 559)" fill="url(#linear-gradient)"/>
+          <rect id="Rectangle_1903" data-name="Rectangle 1903" width="20" height="58" transform="translate(721 554)" fill="url(#linear-gradient)"/>
+          <rect id="Rectangle_1904" data-name="Rectangle 1904" width="20" height="72" transform="translate(772 540)" fill="url(#linear-gradient)"/>
+          <rect id="Rectangle_1905" data-name="Rectangle 1905" width="20" height="90" transform="translate(825 522)" fill="url(#linear-gradient)"/>
+          <rect id="Rectangle_1906" data-name="Rectangle 1906" width="20" height="112" transform="translate(881 500)" fill="url(#linear-gradient)"/>
+          <rect id="Rectangle_1907" data-name="Rectangle 1907" width="20" height="144" transform="translate(933 468)" fill="url(#linear-gradient)"/>
+          <rect id="Rectangle_1901" data-name="Rectangle 1901" width="20" height="115" transform="translate(619 497)" fill="url(#linear-gradient)"/>
+          <rect id="Rectangle_1900" data-name="Rectangle 1900" width="20" height="98" transform="translate(567 514)" fill="url(#linear-gradient)"/>
+          <rect id="Rectangle_1898" data-name="Rectangle 1898" width="20" height="100" transform="translate(468 512)" fill="url(#linear-gradient)"/>
+          <rect id="Rectangle_1897" data-name="Rectangle 1897" width="20" height="125" transform="translate(416 487)" fill="url(#linear-gradient)"/>
+          <rect id="Rectangle_1895" data-name="Rectangle 1895" width="20" height="112" transform="translate(314 500)" fill="url(#linear-gradient)"/>
+        </g>
+      </g>
+    </g>
+    <line id="Line_400" data-name="Line 400" x2="736" transform="translate(217.5 612.5)" fill="none" stroke="#2249a0" stroke-width="1"/>
+  </g>
+</svg>
