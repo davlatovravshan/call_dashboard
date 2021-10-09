@@ -406,7 +406,7 @@ const Content = () => {
 
 
             <div className={`popur__info ${open ? 'popur__info-active' : ''}`}>
-                <div className="close__icon">
+                <div className="close__icon" onClick={()=>openItems()}>
                     <img src={delet} alt=""/>
                 </div>
                 <h1>Viloyatlar kesimida <span>statistic ma'lumotlar</span></h1>
