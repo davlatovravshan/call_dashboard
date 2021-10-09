@@ -41,6 +41,11 @@ import phone3 from "../../assets/img/3.svg"
 
 const Content = () => {
 
+    const [open, setOpen] = useState(false);
+
+    const openItems = () => {
+        setOpen(!open)
+    }
 
     return (
         <div className="content__wrapper">
@@ -262,7 +267,7 @@ const Content = () => {
                         <div className="map__button">
                             <h3>respublika bo’yicha</h3>
                             <span>8525</span>
-                            <div className="button">
+                            <div className="button" onClick={openItems}>
                                 <img src={arrowDown} alt=""/>
                             </div>
                         </div>
@@ -286,6 +291,7 @@ const Content = () => {
                 </div>
 
                 <div className="phone__boxes">
+
                     <div>
                         <div className="boxes__item">
                             <div className="item__img">
@@ -399,7 +405,7 @@ const Content = () => {
             </div>
 
 
-            <div className="popur__info">
+            <div className={`popur__info ${open ? 'popur__info-active' : ''}`}>
                 <div className="close__icon">
                     <img src={delet} alt=""/>
                 </div>
