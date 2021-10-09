@@ -1,13 +1,14 @@
 .content__wrapper {
-  padding: 20px 80px 40px 85px;
+  padding: 0 80px 0 85px;
   background-color: #F4F5F9;
-  height: calc(100vh - 128px);
+  height: calc(100vh - 68px);
   overflow: scroll;
   display: flex;
 
   .row__left {
+    overflow: scroll;
     flex: 0 0 50%;
-    border: 1px solid red;
+    padding: 20px 0 40px 0;
 
     .circle__box {
       width: 823px;
@@ -121,6 +122,73 @@
       }
     }
 
+
+    .week__statist {
+      width: 785px;
+      height: 275px;
+      background-color: #ffffff;
+      border-radius: 26px;
+      margin-top: 15px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .week__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        .left__info {
+          p {
+            font-size: 14px;
+            margin: 0;
+            font-weight: 600;
+            color: #000000;
+          }
+
+          .blue__text {
+            color: #5C86E2;
+          }
+        }
+
+        .right__info {
+          display: flex;
+          align-items: center;
+
+          p {
+            font-size: 15px;
+            font-weight: 600;
+            color: #5C86E2;
+            margin: 0 20px 0 0;
+            text-transform: uppercase;
+          }
+
+          button {
+            background-color: rgba(164, 164, 164, .2);
+            border-radius: 14px;
+            outline: none;
+            font-size: 13px;
+            color: #606060;
+            border: none;
+            cursor: pointer;
+            width: 60px;
+            height: 30px;
+
+            &:not(:last-child) {
+              margin-right: 20px;
+            }
+
+            &:hover {
+              background-color: rgba(94, 134, 226, .2);
+              font-weight: 600;
+              color: #5C86E2;
+            }
+          }
+        }
+      }
+    }
+
     .progress__box {
       width: 785px;
       height: 360px;
@@ -192,8 +260,115 @@
   }
 
   .row__right {
+    overflow: scroll;
     flex: 0 0 50%;
+    padding: 20px 0 40px 0;
     border: 1px solid red;
+
+    .map__row {
+      width: 785px;
+      height: 232px;
+      background-color: #ffffff;
+      border-radius: 26px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .map__info {
+        display: flex;
+
+        .map__img {
+          img {
+            width: 400px;
+          }
+        }
+
+        .map__button {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-left: 35px;
+
+          h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #000000;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+          }
+
+          span {
+            font-size: 30px;
+            font-weight: 400;
+            color: #537DD9;
+          }
+
+          .button {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 1px solid #537DD9;
+            box-shadow: rgba(79, 118, 203, .5);
+          }
+        }
+      }
+
+    }
+
+    .week__statist {
+      width: 785px;
+      height: 275px;
+      background-color: #ffffff;
+      border-radius: 26px;
+      margin-top: 15px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .week__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        .left__info {
+          p {
+            font-size: 14px;
+            margin: 0;
+            font-weight: 600;
+            color: #000000;
+          }
+
+          .blue__text {
+            color: #5C86E2;
+          }
+        }
+
+        .right__info {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+
+          p {
+            font-size: 10px;
+            color: #000000;
+            font-weight: 600;
+            margin: 0;
+            display: block;
+          }
+
+        }
+      }
+    }
+
+
   }
 }
 
