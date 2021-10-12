@@ -281,6 +281,9 @@
       position: relative;
       transition: all .5s ease-in;
       box-shadow: 2px 10px 10px -10px rgba(79, 118, 203, 1);
+      background-image: url("../../../assets/img/map__bg.svg");
+      background-repeat: no-repeat;
+      background-position: 130% -50%;
 
       .map__info {
         display: flex;
@@ -393,6 +396,9 @@
       display: flex;
       justify-content: space-between;
       box-shadow: 2px 10px 24px -10px rgba(79, 118, 203, 1);
+      background-image: url("../../../assets/img/call__bg.svg");
+      background-repeat: no-repeat;
+      background-position: 90% 340px;
 
       .boxes__item {
         display: flex;
