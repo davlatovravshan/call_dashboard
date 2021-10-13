@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import './css/content.scss'
 
 import jami from "../../assets/img/jami.svg"
@@ -38,52 +38,74 @@ import phone8 from "../../assets/img/8.svg"
 import phone9 from "../../assets/img/9.svg"
 import phone10 from "../../assets/img/10.svg"
 import phone3 from "../../assets/img/3.svg"
+import ActiveRegionCard from "../regionCards/ActiveRegionCard";
+import {GlobalContext} from "../../context/globalContext";
+import OperatorInfoCount from "../operator/OperatorInfoCount";
+import LineChart from "../charts/LineChart";
+import TotalChart from "../charts/TotalChart";
+import AnsweredChart from "../charts/AnsweredChart";
+import InTurnChart from "../charts/InTurnChart";
+import moment from "moment";
+import OthersChart from "../charts/OthersChart";
 
 const Content = () => {
 
-    const [open, setOpen] = useState(false);
+    const {openItems, open, fullData} = useContext(GlobalContext);
+    // console.log(Math.round(fullData[0]?.stat?.distributedCalls / fullData[0]?.stat?.shortCalls) * 10);
+    // console.log(Math.round(fullData[0]?.stat?.shortCalls / 10));
+    const [others, setOthers] = useState(0);
 
-    const openItems = () => {
-        setOpen(!open)
-    }
+    useEffect(() => {
+        let count = fullData[0]?.stat?.missedCalls + fullData[0]?.stat?.shortCalls + fullData[0]?.stat?.missedOnGreetingCalls
+        setOthers(count)
+    }, [fullData])
 
     return (
         <div className="content__wrapper">
 
             <div className="row__left">
+                {/*-------------------------------------------------------------------*/}
                 <div className="circle__box">
                     <div className="circle__item">
                         <div className="items">
+                            <TotalChart/>
                             <div className="items__info">
-                                <p className="number__info">8525</p>
+                                <p className="number__info">{fullData[0]?.stat?.distributedCalls}</p>
                                 <p className="number__text">Jami</p>
                             </div>
                             <img className="img__top" src={jami} alt=""/>
                         </div>
+
                         <div className="items">
+                            <AnsweredChart totalCals={fullData[0]?.stat?.distributedCalls}
+                                           answeredCals={fullData[0]?.stat?.acceptedCalls}/>
                             <div className="items__info">
-                                <p className="number__info">4480</p>
+                                <p className="number__info">{fullData[0]?.stat?.acceptedCalls}</p>
                                 <p className="number__text">Javob</p>
                             </div>
                             <img className="img__top" src={javob} alt=""/>
                         </div>
                         <div className="items">
+                            <InTurnChart/>
                             <div className="items__info">
-                                <p className="number__info">8525</p>
+                                <p className="number__info">{fullData[0]?.stat?.currentQueueWaitingCalls}</p>
                                 <p className="number__text">Navbatda</p>
                             </div>
                             <img className="img__top" src={navbatda} alt=""/>
                         </div>
                         <div className="items">
+                            <TotalChart/>
                             <div className="items__info">
-                                <p className="number__info">22/07/2021</p>
-                                <p className="number__info">22/07/2021</p>
+                                <p className="number__info">{moment(new Date()).format("DD/MM/YYYY")}</p>
+                                <p className="number__info">{moment(new Date()).format("DD/MM/YYYY")}</p>
                             </div>
                             <img className="img__top" src={calendar} alt=""/>
                         </div>
                         <div className="items">
+                            <OthersChart totalCalls={fullData[0]?.stat?.distributedCalls}
+                                         othersCalls={others}/>
                             <div className="items__info">
-                                <p className="number__info">8525</p>
+                                <p className="number__info">{others || 0}</p>
                                 <p className="number__text">Boshqalar</p>
                             </div>
                             <img className="img__top" src={boshqalar} alt=""/>
@@ -95,12 +117,15 @@ const Content = () => {
                                 <p>Nafaol</p>
                             </div>
                             <div className="line__body">
-                                <div className="progress">
-                                    <div className="bar" style={{width: '75%'}}>
-                                    </div>
-                                </div>
+                                {/*<div className="progress">*/}
+                                {/*    <div className="bar" style={{width: '75%'}}>*/}
+                                {/*    </div>*/}
+                                {/*</div>*/}
+                                <LineChart total={fullData[0]?.stat?.shortCalls / 10}
+                                           size={"120px"}
+                                           strokeWidth={"4"}/>
                                 <div>
-                                    <p className="text__right">1650</p>
+                                    <p className="text__right">{fullData[0]?.stat?.shortCalls}</p>
                                 </div>
                             </div>
 
@@ -110,12 +135,15 @@ const Content = () => {
                                 <p>Yo'qotilgan</p>
                             </div>
                             <div className="line__body">
-                                <div className="progress">
-                                    <div className="bar" style={{width: '75%'}}>
-                                    </div>
-                                </div>
+                                {/*<div className="progress">*/}
+                                {/*    <div className="bar" style={{width: '75%'}}>*/}
+                                {/*    </div>*/}
+                                {/*</div>*/}
+                                <LineChart total={fullData[0]?.stat?.missedCalls / 10}
+                                           size={"120px"}
+                                           strokeWidth={"4"}/>
                                 <div>
-                                    <p className="text__right">165</p>
+                                    <p className="text__right">{fullData[0]?.stat?.missedCalls}</p>
                                 </div>
                             </div>
 
@@ -125,18 +153,23 @@ const Content = () => {
                                 <p>Salomlashishda</p>
                             </div>
                             <div className="line__body">
-                                <div className="progress">
-                                    <div className="bar" style={{width: '75%'}}>
-                                    </div>
-                                </div>
+                                {/*<div className="progress">*/}
+                                {/*    <div className="bar" style={{width: '75%'}}>*/}
+                                {/*    </div>*/}
+                                {/*</div>*/}
+                                <LineChart total={fullData[0]?.stat?.missedOnGreetingCalls / 10}
+                                           size={"120px"}
+                                           strokeWidth={"4"}/>
                                 <div>
-                                    <p className="text__right">1144</p>
+                                    <p className="text__right">{fullData[0]?.stat?.missedOnGreetingCalls}</p>
                                 </div>
                             </div>
 
                         </div>
                     </div>
                 </div>
+                {/*-------------------------------------------------------------------*/}
+
                 <div className="week__statist">
                     <div className="week__header">
                         <div className="left__info">
@@ -154,125 +187,12 @@ const Content = () => {
                         <img style={{width: '100%'}} src={wekkChart} alt=""/>
                     </div>
                 </div>
-                <div className="progress__box">
-                    <h1>Operatorlarning joriy holati haqida ma'lumot</h1>
-                    <div className="progress">
-                        <div>
-                            <div className="progress__title">
-                                <p>Ro’yxatdan o’tgan operatorlar soni</p>
-                            </div>
-                            <div className="progress">
-                                <div className="bar" style={{width: '85%'}}>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="circle__end">
-                            <span>65</span>
-                        </div>
-                    </div>
-                    <div className="progress">
-                        <div>
-                            <div className="progress__title">
-                                <p>Suhbatlashayotgan operatorlar soni </p>
-                            </div>
-                            <div className="progress">
-                                <div className="bar" style={{width: '35%'}}>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="circle__end">
-                            <span>17</span>
-                        </div>
-                    </div>
-                    <div className="progress">
-                        <div>
-                            <div className="progress__title">
-                                <p>Band tayyor operatorlar soni </p>
-                            </div>
-                            <div className="progress">
-                                <div className="bar" style={{width: '25%'}}>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="circle__end">
-                            <span>13</span>
-                        </div>
-                    </div>
-                    <div className="progress">
-                        <div>
-                            <div className="progress__title">
-                                <p>Suhbat uchun tayyor operatorlar soni </p>
-                            </div>
-                            <div className="progress">
-                                <div className="bar" style={{width: '55%'}}>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="circle__end">
-                            <span>33</span>
-                        </div>
-                    </div>
-                    <div className="progress">
-                        <div>
-                            <div className="progress__title">
-                                <p>Bloklangan holatdagi operatorlar soni</p>
-                            </div>
-                            <div className="progress">
-                                <div className="bar" style={{width: '55%'}}>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="circle__end">
-                            <span>33</span>
-                        </div>
-                    </div>
-                    <div className="progress">
-                        <div>
-                            <div className="progress__title">
-                                <p>Xizmatdan keyingi holatdagi operatorlar soni</p>
-                            </div>
-                            <div className="progress">
-                                <div className="bar" style={{width: '5%'}}>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="circle__end">
-                            <span>0</span>
-                        </div>
-                    </div>
-                    <div className="progress">
-                        <div>
-                            <div className="progress__title">
-                                <p>Dam olayotgan operatorlar soni</p>
-                            </div>
-                            <div className="progress">
-                                <div className="bar" style={{width: '5%'}}>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="circle__end">
-                            <span>0</span>
-                        </div>
-                    </div>
-                </div>
+                <OperatorInfoCount/>
             </div>
 
             <div className="row__right">
 
-                <div className="map__row">
-                    <div className="map__info">
-                        <div className="map__img">
-                            <img src={map} alt=""/>
-                        </div>
-                        <div className="map__button">
-                            <h3>respublika bo’yicha</h3>
-                            <span>8525</span>
-                            <div className="button" onClick={openItems}>
-                                <img src={arrowDown} alt=""/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <ActiveRegionCard/>
 
                 <div className="week__statist">
                     <div className="week__header">
@@ -406,7 +326,7 @@ const Content = () => {
 
 
             <div className={`popur__info ${open ? 'popur__info-active' : ''}`}>
-                <div className="close__icon" onClick={()=>openItems()}>
+                <div className="close__icon" onClick={() => openItems()}>
                     <img src={delet} alt=""/>
                 </div>
                 <h1>Viloyatlar kesimida <span>statistic ma'lumotlar</span></h1>
