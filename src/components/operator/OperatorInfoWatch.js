@@ -1,11 +1,21 @@
 import React, {useEffect, useState} from 'react';
-import callOne from "../../assets/img/call1.svg";
-import callTwo from "../../assets/img/call2.svg";
-import callThree from "../../assets/img/call3.svg";
-import callFour from "../../assets/img/call4.svg";
-import callSex from "../../assets/img/naushnik.svg";
-import callFive from "../../assets/img/call5.svg";
+// import callOne from "../../assets/img/call1.svg";
+// import callTwo from "../../assets/img/call2.svg";
+// import callThree from "../../assets/img/call3.svg";
+// import callFour from "../../assets/img/call4.svg";
+// import callSex from "../../assets/img/naushnik.svg";
+// import callFive from "../../assets/img/call5.svg";
 import moment from "moment";
+import phone1 from "../../assets/img/1.svg";
+import phone2 from "../../assets/img/2.svg";
+import phone3 from "../../assets/img/3.svg";
+import phone4 from "../../assets/img/4.svg";
+import phone5 from "../../assets/img/5.svg";
+import phone6 from "../../assets/img/6.svg";
+import phone7 from "../../assets/img/7.svg";
+import phone8 from "../../assets/img/8.svg";
+import phone9 from "../../assets/img/9.svg";
+import phone10 from "../../assets/img/10.svg";
 
 const det = {
     "result": "success",
@@ -110,7 +120,7 @@ const OperatorInfoWatch = ({fullData, fullAgentData}) => {
 
     return (
         <div>
-            <div className="progress-box">
+            {/*<div className="progress-box">
                 <div className="progress-box-header">
                     <div className="progress-box-item header-left">
                         <div className="img">
@@ -212,6 +222,117 @@ const OperatorInfoWatch = ({fullData, fullAgentData}) => {
                         </div>
                     </div>
                 </div>
+            </div>*/}
+            <div className="phone__boxes">
+
+                <div>
+                    <div className="boxes__item">
+                        <div className="item__img">
+                            <img src={phone1} alt=""/>
+                        </div>
+                        <div className="item__info">
+                            <p>Kutish Qo'ng'iroqlari</p>
+                            <span className="red">0</span>
+                        </div>
+                    </div>
+
+                    <div className="boxes__item">
+                        <div className="item__img">
+                            <img src={phone2} alt=""/>
+                        </div>
+                        <div className="item__info">
+                            <p>Ishlov qo’ng’roqlari</p>
+                            <span className="blue">00:03:05</span>
+                        </div>
+                    </div>
+
+                    <div className="boxes__item">
+                        <div className="item__img">
+                            <img src={phone3} alt=""/>
+                        </div>
+                        <div className="item__info">
+                            <p>O'rtacha Navbat Vaqti</p>
+                            <span className="orange">00:03:05</span>
+                        </div>
+                    </div>
+
+                    <div className="boxes__item">
+                        <div className="item__img">
+                            <img src={phone4} alt=""/>
+                        </div>
+                        <div className="item__info">
+                            <p>Qoldirilgan qo'ng'iroqlar</p>
+                            <span className="red">00:03:05</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div className="boxes__item">
+                        <div className="item__img">
+                            <img src={phone5} alt=""/>
+                        </div>
+                        <div className="item__info">
+                            <p>O’rtacha qo’ng’iroq vaqti</p>
+                            <span className="red">0</span>
+                        </div>
+                    </div>
+
+                    <div className="boxes__item">
+                        <div className="item__img">
+                            <img src={phone6} alt=""/>
+                        </div>
+                        <div className="item__info">
+                            <p>Qo'ng'iroq davomiyligi</p>
+                            <span className="green">00:03:05</span>
+                        </div>
+                    </div>
+
+                    <div className="boxes__item">
+                        <div className="item__img">
+                            <img src={phone7} alt=""/>
+                        </div>
+                        <div className="item__info">
+                            <p>Xizmat darajasi</p>
+                            <span className="green">00:03:05</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div>
+                    <div className="boxes__item">
+                        <div className="item__img">
+                            <img src={phone8} alt=""/>
+                        </div>
+                        <div className="item__info">
+                            <p>Eng uzoq kutish vaqti</p>
+                            <span className="red">00:00:21</span>
+                        </div>
+                    </div>
+
+                    <div className="boxes__item">
+                        <div className="item__img">
+                            <img src={phone9} alt=""/>
+                        </div>
+                        <div className="item__info">
+                            <p>Qo’ng’iroqlarga javob berish vaqti</p>
+                            <span className="orange">00:03:05</span>
+                        </div>
+                    </div>
+
+                    <div className="boxes__item">
+                        <div className="item__img">
+                            <img src={phone10} alt=""/>
+                        </div>
+                        <div className="item__info">
+                            <p>Call Back</p>
+                            <span className="red">00:03:05</span>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </div>
     );

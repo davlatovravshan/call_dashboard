@@ -47,6 +47,7 @@ import AnsweredChart from "../charts/AnsweredChart";
 import InTurnChart from "../charts/InTurnChart";
 import moment from "moment";
 import OthersChart from "../charts/OthersChart";
+import OperatorInfoWatch from "../operator/OperatorInfoWatch";
 
 const Content = () => {
 
@@ -210,117 +211,7 @@ const Content = () => {
                     </div>
                 </div>
 
-                <div className="phone__boxes">
-
-                    <div>
-                        <div className="boxes__item">
-                            <div className="item__img">
-                                <img src={phone1} alt=""/>
-                            </div>
-                            <div className="item__info">
-                                <p>Kutish Qo'ng'iroqlari</p>
-                                <span className="red">0</span>
-                            </div>
-                        </div>
-
-                        <div className="boxes__item">
-                            <div className="item__img">
-                                <img src={phone2} alt=""/>
-                            </div>
-                            <div className="item__info">
-                                <p>Ishlov qo’ng’roqlari</p>
-                                <span className="blue">00:03:05</span>
-                            </div>
-                        </div>
-
-                        <div className="boxes__item">
-                            <div className="item__img">
-                                <img src={phone3} alt=""/>
-                            </div>
-                            <div className="item__info">
-                                <p>O'rtacha Navbat Vaqti</p>
-                                <span className="orange">00:03:05</span>
-                            </div>
-                        </div>
-
-                        <div className="boxes__item">
-                            <div className="item__img">
-                                <img src={phone4} alt=""/>
-                            </div>
-                            <div className="item__info">
-                                <p>Qoldirilgan qo'ng'iroqlar</p>
-                                <span className="red">00:03:05</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div className="boxes__item">
-                            <div className="item__img">
-                                <img src={phone5} alt=""/>
-                            </div>
-                            <div className="item__info">
-                                <p>O’rtacha qo’ng’iroq vaqti</p>
-                                <span className="red">0</span>
-                            </div>
-                        </div>
-
-                        <div className="boxes__item">
-                            <div className="item__img">
-                                <img src={phone6} alt=""/>
-                            </div>
-                            <div className="item__info">
-                                <p>Qo'ng'iroq davomiyligi</p>
-                                <span className="green">00:03:05</span>
-                            </div>
-                        </div>
-
-                        <div className="boxes__item">
-                            <div className="item__img">
-                                <img src={phone7} alt=""/>
-                            </div>
-                            <div className="item__info">
-                                <p>Xizmat darajasi</p>
-                                <span className="green">00:03:05</span>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div>
-                        <div className="boxes__item">
-                            <div className="item__img">
-                                <img src={phone8} alt=""/>
-                            </div>
-                            <div className="item__info">
-                                <p>Eng uzoq kutish vaqti</p>
-                                <span className="red">00:00:21</span>
-                            </div>
-                        </div>
-
-                        <div className="boxes__item">
-                            <div className="item__img">
-                                <img src={phone9} alt=""/>
-                            </div>
-                            <div className="item__info">
-                                <p>Qo’ng’iroqlarga javob berish vaqti</p>
-                                <span className="orange">00:03:05</span>
-                            </div>
-                        </div>
-
-                        <div className="boxes__item">
-                            <div className="item__img">
-                                <img src={phone10} alt=""/>
-                            </div>
-                            <div className="item__info">
-                                <p>Call Back</p>
-                                <span className="red">00:03:05</span>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
+                <OperatorInfoWatch/>
 
             </div>
 
