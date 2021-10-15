@@ -2,12 +2,13 @@ import React, {createContext, useState} from 'react';
 import api from '../api/axiosConfig';
 import moment from "moment";
 
-export const GlobalContext = createContext();
+export const GlobalContext = createContext(null);
 
 export default function GlobalContextProvider(props) {
     const [fullData, setFullData] = useState([]);
     const [error, setError] = useState([]);
     const [open, setOpen] = useState(false);
+    console.log(error);
 
     const openItems = () => {
         setOpen(!open)

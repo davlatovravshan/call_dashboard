@@ -1,15 +1,15 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useContext, useEffect} from "react";
 import './assets/css/main.scss'
 import Saidbar from './components/Saidbar/Saidbar'
 import Header from './components/Header/Header'
-import Content from './components/Content/Content'
+import Sos from './components/Content/Sos'
+import Criminals from './components/Content/Criminals'
 import {GlobalContext} from "./context/globalContext";
-let count = 0
+import {Switch, Route} from 'react-router-dom';
+
 function App() {
     const {fullData, getFullData} = useContext(GlobalContext);
 
-    // console.log(count++);
-    // console.log(fullData);
     useEffect(() => {
         if (!fullData.length) getFullData()
     }, [])
@@ -20,7 +20,11 @@ function App() {
             </div>
             <div className="container__coontent">
                 <Header/>
-                <Content/>
+                <Switch>
+                    <Route path="/criminals" component={Criminals} exact/>
+                    <Route path="/sos" component={Sos} exact/>
+                    {/*<Redirect to="/"/>*/}
+                </Switch>
             </div>
         </div>
     );

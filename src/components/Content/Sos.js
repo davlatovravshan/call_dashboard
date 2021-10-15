@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, useState} from "react";
-import './css/content.scss'
+import './css/sos.scss'
 
 import jami from "../../assets/img/jami.svg"
 import javob from "../../assets/img/javob.svg"
@@ -49,11 +49,9 @@ import moment from "moment";
 import OthersChart from "../charts/OthersChart";
 import OperatorInfoWatch from "../operator/OperatorInfoWatch";
 
-const Content = () => {
+const Sos = () => {
 
     const {openItems, open, fullData} = useContext(GlobalContext);
-    // console.log(Math.round(fullData[0]?.stat?.distributedCalls / fullData[0]?.stat?.shortCalls) * 10);
-    // console.log(Math.round(fullData[0]?.stat?.shortCalls / 10));
     const [others, setOthers] = useState(0);
 
     useEffect(() => {
@@ -122,7 +120,7 @@ const Content = () => {
                                 {/*    <div className="bar" style={{width: '75%'}}>*/}
                                 {/*    </div>*/}
                                 {/*</div>*/}
-                                <LineChart total={fullData[0]?.stat?.shortCalls / 10}
+                                <LineChart total={Math.round(fullData[0]?.stat?.shortCalls * 100 / fullData[0]?.stat?.distributedCalls)}
                                            size={"120px"}
                                            strokeWidth={"4"}/>
                                 <div>
@@ -140,7 +138,7 @@ const Content = () => {
                                 {/*    <div className="bar" style={{width: '75%'}}>*/}
                                 {/*    </div>*/}
                                 {/*</div>*/}
-                                <LineChart total={fullData[0]?.stat?.missedCalls / 10}
+                                <LineChart total={Math.round(fullData[0]?.stat?.missedCalls * 100 / fullData[0]?.stat?.distributedCalls)}
                                            size={"120px"}
                                            strokeWidth={"4"}/>
                                 <div>
@@ -482,4 +480,4 @@ const Content = () => {
     )
 }
 
-export default Content;
+export default Sos;

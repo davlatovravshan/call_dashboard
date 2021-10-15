@@ -6,6 +6,8 @@ import phone from '../../assets/img/phone__saidbar.svg'
 import clock from '../../assets/img/clock__saidbar.svg'
 import people from '../../assets/img/people__saidbar.svg'
 import operator from '../../assets/img/operator__saidbar.svg'
+import handcuffs from '../../assets/img/handcuffs.svg'
+import {Link} from "react-router-dom";
 
 const Saidbar = () => {
     return (
@@ -19,23 +21,28 @@ const Saidbar = () => {
                 <div className="saidbar__menu">
                     <ul className="saidbar__menu-nav">
                         <li className="saidbar__menu-li">
-                            <a className="saidbar__menu-link" href="#!"><img src={location} alt=""/><p>hududlar</p></a>
+                            <Link className="saidbar__menu-link" to={'/'}><img src={location} alt=""/><p>hududlar</p>
+                            </Link>
                         </li>
                         <li className="saidbar__menu-li">
-                            <a className="saidbar__menu-link" href="#!"><img src={phone} alt=""/><p>qo'ngirloqlar
-                                xizmati</p></a>
+                            <Link className="saidbar__menu-link" to={'/sos'}><img src={phone} alt=""/><p>qo'ngirloqlar
+                                xizmati</p></Link>
                         </li>
                         <li className="saidbar__menu-li">
-                            <a className="saidbar__menu-link" href="#!"><img src={people} alt=""/><p>qo'ngirloqlar
-                                guruhi</p></a>
+                            <Link className="saidbar__menu-link" to={'/'}><img src={people} alt=""/><p>qo'ngirloqlar
+                                guruhi</p></Link>
                         </li>
                         <li className="saidbar__menu-li">
-                            <a className="saidbar__menu-link" href="#!"><img src={operator} alt=""/><p>operatorlar</p>
-                            </a>
+                            <Link className="saidbar__menu-link" to={'/'}><img src={operator} alt=""/><p>operatorlar</p>
+                            </Link>
                         </li>
                         <li className="saidbar__menu-li">
-                            <a className="saidbar__menu-link" href="#!"><img src={clock} alt=""/><p>davr oralig'i</p>
-                            </a>
+                            <Link className="saidbar__menu-link" to={'/'}><img src={clock} alt=""/><p>davr oralig'i</p>
+                            </Link>
+                        </li>
+                        <li className="saidbar__menu-li">
+                            <Link className="saidbar__menu-link" to={'/criminals'}><img src={handcuffs} alt=""/><p>jinoyatlar</p>
+                            </Link>
                         </li>
                     </ul>
                 </div>

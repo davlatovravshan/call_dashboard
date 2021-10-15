@@ -5,7 +5,7 @@ import React, {useEffect, useState} from 'react';
 // import callFour from "../../assets/img/call4.svg";
 // import callSex from "../../assets/img/naushnik.svg";
 // import callFive from "../../assets/img/call5.svg";
-import moment from "moment";
+// import moment from "moment";
 import phone1 from "../../assets/img/1.svg";
 import phone2 from "../../assets/img/2.svg";
 import phone3 from "../../assets/img/3.svg";
@@ -17,72 +17,72 @@ import phone8 from "../../assets/img/8.svg";
 import phone9 from "../../assets/img/9.svg";
 import phone10 from "../../assets/img/10.svg";
 
-const det = {
-    "result": "success",
-    "stat": {
-        "acceptedCalls": 42850,
-        "acceptedDuration": 625049,
-        "acceptedSLCalls": 38344,
-        "currentQueueWaitingCalls": 6,
-        "distributedCalls": 81570,
-        "holdDuration": 31915,
-        "maxQueueWaitingDuration": 16683,
-        "missedCalls": 12010,
-        "missedOnGreetingCalls": 12692,
-        "queueWaitingAcceptedDuration": 293141,
-        "queueWaitingCalls": 33371,
-        "queueWaitingDuration": 1547387,
-        "queueWaitingExceededCalls": 17549,
-        "queueWaitingMissedCalls": 9798,
-        "queueWaitingMissedDuration": 273013,
-        "shortCalls": 14008,
-        "talkDuration": 3173675,
-        "transferCalls": 762,
-        "wrapUpDuration": 0
-    },
-    "agentStates": [
-        {
-            "agentState": "BUSY",
-            "callState": "CONNECTING",
-            "count": 3
-        },
-        {
-            "agentState": "BUSY",
-            "callState": "IN_SERVICE",
-            "count": 11
-        },
-        {
-            "agentState": "BUSY_LOCKED",
-            "callState": "CONNECTING",
-            "count": 1
-        },
-        {
-            "agentState": "LAZY",
-            "callState": "NULL",
-            "count": 3
-        },
-        {
-            "agentState": "LOCKED",
-            "callState": "UNKNOWN",
-            "count": 23
-        },
-        {
-            "agentState": "NULL",
-            "callState": "NULL",
-            "count": 174
-        },
-        {
-            "agentState": "NULL",
-            "callState": "UNKNOWN",
-            "count": 2
-        },
-        {
-            "agentState": "READY",
-            "callState": "UNKNOWN",
-            "count": 18
-        }
-    ]
-}
+// const det = {
+//     "result": "success",
+//     "stat": {
+//         "acceptedCalls": 42850,
+//         "acceptedDuration": 625049,
+//         "acceptedSLCalls": 38344,
+//         "currentQueueWaitingCalls": 6,
+//         "distributedCalls": 81570,
+//         "holdDuration": 31915,
+//         "maxQueueWaitingDuration": 16683,
+//         "missedCalls": 12010,
+//         "missedOnGreetingCalls": 12692,
+//         "queueWaitingAcceptedDuration": 293141,
+//         "queueWaitingCalls": 33371,
+//         "queueWaitingDuration": 1547387,
+//         "queueWaitingExceededCalls": 17549,
+//         "queueWaitingMissedCalls": 9798,
+//         "queueWaitingMissedDuration": 273013,
+//         "shortCalls": 14008,
+//         "talkDuration": 3173675,
+//         "transferCalls": 762,
+//         "wrapUpDuration": 0
+//     },
+//     "agentStates": [
+//         {
+//             "agentState": "BUSY",
+//             "callState": "CONNECTING",
+//             "count": 3
+//         },
+//         {
+//             "agentState": "BUSY",
+//             "callState": "IN_SERVICE",
+//             "count": 11
+//         },
+//         {
+//             "agentState": "BUSY_LOCKED",
+//             "callState": "CONNECTING",
+//             "count": 1
+//         },
+//         {
+//             "agentState": "LAZY",
+//             "callState": "NULL",
+//             "count": 3
+//         },
+//         {
+//             "agentState": "LOCKED",
+//             "callState": "UNKNOWN",
+//             "count": 23
+//         },
+//         {
+//             "agentState": "NULL",
+//             "callState": "NULL",
+//             "count": 174
+//         },
+//         {
+//             "agentState": "NULL",
+//             "callState": "UNKNOWN",
+//             "count": 2
+//         },
+//         {
+//             "agentState": "READY",
+//             "callState": "UNKNOWN",
+//             "count": 18
+//         }
+//     ]
+// }
 
 // 1) qo'ng'iroqning umumiy davomiyligi
 // 2) Navbatda kutishning umumiy vaqti
