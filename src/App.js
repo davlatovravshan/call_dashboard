@@ -1,18 +1,18 @@
-import React, {useContext, useEffect} from "react";
+import React, {useContext} from "react";
 import './assets/css/main.scss'
 import Saidbar from './components/Saidbar/Saidbar'
 import Header from './components/Header/Header'
 import Sos from './components/Content/Sos'
 import Criminals from './components/Content/Criminals'
 import {GlobalContext} from "./context/globalContext";
-import {Switch, Route} from 'react-router-dom';
+import {Switch, Route, Redirect} from 'react-router-dom';
 
 function App() {
     const {fullData, getFullData} = useContext(GlobalContext);
 
-    useEffect(() => {
-        if (!fullData.length) getFullData()
-    }, [])
+
+    if (!fullData.length) getFullData()
+
     return (
         <div className="container">
             <div className="container__saidbar">
@@ -22,8 +22,9 @@ function App() {
                 <Header/>
                 <Switch>
                     <Route path="/criminals" component={Criminals} exact/>
+
                     <Route path="/sos" component={Sos} exact/>
-                    {/*<Redirect to="/"/>*/}
+                    <Redirect to="/sos"/>
                 </Switch>
             </div>
         </div>

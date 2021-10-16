@@ -1,14 +1,22 @@
 $shadow: 0 3px 6px rgba($color: #4F76CB, $alpha: 0.34);
 
-.content__wrapper {
+.content__wrappers {
   padding: 13px 37px 30px 22px;
   background-color: #f4f5f9;
-  height: calc(100vh - 97px);
+  height: calc(100vh - 111px);
+  overflow-y: scroll;
   display: flex;
 
-  .content__left {
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .content__lefts {
     width: 811px;
+    height: 100vh;
     margin-right: 11px;
+    //overflow-y: scroll;
   }
 
   .content__cell {
@@ -291,7 +299,7 @@ $shadow: 0 3px 6px rgba($color: #4F76CB, $alpha: 0.34);
           }
 
           img {
-            margin-left: 4px;
+            margin-left: 15px;
           }
         }
       }

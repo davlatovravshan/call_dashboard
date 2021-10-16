@@ -10,34 +10,34 @@ import wekkChart from "../../assets/img/week.svg"
 import upGreen from "../../assets/img/up__green.svg"
 import blueCricle from "../../assets/img/blur__cricle.svg"
 import redCricle from "../../assets/img/red__cricle.svg"
-import map from "../../assets/img/map__small.svg"
-import arrowDown from "../../assets/img/arrow__down.svg"
+// import map from "../../assets/img/map__small.svg"
+// import arrowDown from "../../assets/img/arrow__down.svg"
 import chartRight from "../../assets/img/DDD.svg"
-import delet from "../../assets/img/delete.svg"
-import Qorqalpoqiston from "../../assets/img/Qorqalpoqiston.svg"
-import Andijon from "../../assets/img/Andijon.svg"
-import Jizzax from "../../assets/img/Jizzax.svg"
-import ToshkentV from "../../assets/img/ToshkentV.svg"
-import Xorazm from "../../assets/img/Xorazm.svg"
-import Navoiy from "../../assets/img/Navoiy.svg"
-import Namangan from "../../assets/img/Namangan.svg"
-import Samarqand from "../../assets/img/Samarqand.svg"
-import Fargona from "../../assets/img/Fargona.svg"
-import ToshkentSh from "../../assets/img/ToshkentSh.svg"
-import Sirdaryo from "../../assets/img/Sirdaryo.svg"
-import Surhondaryo from "../../assets/img/Surhondaryo.svg"
-import Qashqadaryo from "../../assets/img/Qashqadaryo.svg"
-import Buxoro from "../../assets/img/Buxoro.svg"
-import phone1 from "../../assets/img/1.svg"
-import phone2 from "../../assets/img/2.svg"
-import phone4 from "../../assets/img/4.svg"
-import phone5 from "../../assets/img/5.svg"
-import phone6 from "../../assets/img/6.svg"
-import phone7 from "../../assets/img/7.svg"
-import phone8 from "../../assets/img/8.svg"
-import phone9 from "../../assets/img/9.svg"
-import phone10 from "../../assets/img/10.svg"
-import phone3 from "../../assets/img/3.svg"
+// import delet from "../../assets/img/delete.svg"
+// import Qorqalpoqiston from "../../assets/img/Qorqalpoqiston.svg"
+// import Andijon from "../../assets/img/Andijon.svg"
+// import Jizzax from "../../assets/img/Jizzax.svg"
+// import ToshkentV from "../../assets/img/ToshkentV.svg"
+// import Xorazm from "../../assets/img/Xorazm.svg"
+// import Navoiy from "../../assets/img/Navoiy.svg"
+// import Namangan from "../../assets/img/Namangan.svg"
+// import Samarqand from "../../assets/img/Samarqand.svg"
+// import Fargona from "../../assets/img/Fargona.svg"
+// import ToshkentSh from "../../assets/img/ToshkentSh.svg"
+// import Sirdaryo from "../../assets/img/Sirdaryo.svg"
+// import Surhondaryo from "../../assets/img/Surhondaryo.svg"
+// import Qashqadaryo from "../../assets/img/Qashqadaryo.svg"
+// import Buxoro from "../../assets/img/Buxoro.svg"
+// import phone1 from "../../assets/img/1.svg"
+// import phone2 from "../../assets/img/2.svg"
+// import phone4 from "../../assets/img/4.svg"
+// import phone5 from "../../assets/img/5.svg"
+// import phone6 from "../../assets/img/6.svg"
+// import phone7 from "../../assets/img/7.svg"
+// import phone8 from "../../assets/img/8.svg"
+// import phone9 from "../../assets/img/9.svg"
+// import phone10 from "../../assets/img/10.svg"
+// import phone3 from "../../assets/img/3.svg"
 import ActiveRegionCard from "../regionCards/ActiveRegionCard";
 import {GlobalContext} from "../../context/globalContext";
 import OperatorInfoCount from "../operator/OperatorInfoCount";
@@ -48,10 +48,11 @@ import InTurnChart from "../charts/InTurnChart";
 import moment from "moment";
 import OthersChart from "../charts/OthersChart";
 import OperatorInfoWatch from "../operator/OperatorInfoWatch";
+import FullRegion from "../regionCards/FullRegion";
 
 const Sos = () => {
 
-    const {openItems, open, fullData} = useContext(GlobalContext);
+    const {fullData} = useContext(GlobalContext);
     const [others, setOthers] = useState(0);
 
     useEffect(() => {
@@ -61,6 +62,7 @@ const Sos = () => {
 
     return (
         <div className="content__wrapper">
+
 
             <div className="row__left">
                 {/*-------------------------------------------------------------------*/}
@@ -120,9 +122,10 @@ const Sos = () => {
                                 {/*    <div className="bar" style={{width: '75%'}}>*/}
                                 {/*    </div>*/}
                                 {/*</div>*/}
-                                <LineChart total={Math.round(fullData[0]?.stat?.shortCalls * 100 / fullData[0]?.stat?.distributedCalls)}
-                                           size={"120px"}
-                                           strokeWidth={"4"}/>
+                                <LineChart
+                                    total={Math.round(fullData[0]?.stat?.shortCalls * 100 / fullData[0]?.stat?.distributedCalls)}
+                                    size={"120px"}
+                                    strokeWidth={"4"}/>
                                 <div>
                                     <p className="text__right">{fullData[0]?.stat?.shortCalls}</p>
                                 </div>
@@ -138,9 +141,10 @@ const Sos = () => {
                                 {/*    <div className="bar" style={{width: '75%'}}>*/}
                                 {/*    </div>*/}
                                 {/*</div>*/}
-                                <LineChart total={Math.round(fullData[0]?.stat?.missedCalls * 100 / fullData[0]?.stat?.distributedCalls)}
-                                           size={"120px"}
-                                           strokeWidth={"4"}/>
+                                <LineChart
+                                    total={Math.round(fullData[0]?.stat?.missedCalls * 100 / fullData[0]?.stat?.distributedCalls)}
+                                    size={"120px"}
+                                    strokeWidth={"4"}/>
                                 <div>
                                     <p className="text__right">{fullData[0]?.stat?.missedCalls}</p>
                                 </div>
@@ -190,9 +194,7 @@ const Sos = () => {
             </div>
 
             <div className="row__right">
-
                 <ActiveRegionCard/>
-
                 <div className="week__statist">
                     <div className="week__header">
                         <div className="left__info">
@@ -208,274 +210,9 @@ const Sos = () => {
                         <img style={{width: '100%'}} src={chartRight} alt=""/>
                     </div>
                 </div>
-
                 <OperatorInfoWatch/>
-
             </div>
-
-
-            <div className={`popur__info ${open ? 'popur__info-active' : ''}`}>
-                <div className="close__icon" onClick={() => openItems()}>
-                    <img src={delet} alt=""/>
-                </div>
-                <h1>Viloyatlar kesimida <span>statistic ma'lumotlar</span></h1>
-                <div className="region__boxes">
-
-                    <div className="box">
-                        <h2>Qoraqalpog’iston respublikasi</h2>
-                        <div className="box__body">
-                            <div className="region__img">
-                                <img src={Qorqalpoqiston} alt=""/>
-                                <span>800</span>
-                            </div>
-                            <div className="region__info">
-                                <p>javob berilgan <span className="text__blue">670</span></p>
-                                <p>navbatda <span className="text__blue">670</span></p>
-                                <p>nofaol <span className="text__blue">670</span></p>
-                                <p>yo'qotilgan <span className="text__blue">670</span></p>
-                                <p>Salomlashishda yo’qotilgan 40 <span className="text__blue">670</span></p>
-                                <p>Call back 10 <span className="text__blue">670</span></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="box">
-                        <h2>Andijon viloyati</h2>
-                        <div className="box__body">
-                            <div className="region__img">
-                                <img src={Andijon} alt=""/>
-                                <span>800</span>
-                            </div>
-                            <div className="region__info">
-                                <p>javob berilgan <span className="text__blue">670</span></p>
-                                <p>navbatda <span className="text__blue">670</span></p>
-                                <p>nofaol <span className="text__blue">670</span></p>
-                                <p>yo'qotilgan <span className="text__blue">670</span></p>
-                                <p>Salomlashishda yo’qotilgan 40 <span className="text__blue">670</span></p>
-                                <p>Call back 10 <span className="text__blue">670</span></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="box">
-                        <h2>Jizzax viloyati</h2>
-                        <div className="box__body">
-                            <div className="region__img">
-                                <img src={Jizzax} alt=""/>
-                                <span>800</span>
-                            </div>
-                            <div className="region__info">
-                                <p>javob berilgan <span className="text__blue">670</span></p>
-                                <p>navbatda <span className="text__blue">670</span></p>
-                                <p>nofaol <span className="text__blue">670</span></p>
-                                <p>yo'qotilgan <span className="text__blue">670</span></p>
-                                <p>Salomlashishda yo’qotilgan 40 <span className="text__blue">670</span></p>
-                                <p>Call back 10 <span className="text__blue">670</span></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="box">
-                        <h2>Toshkent viloyati</h2>
-                        <div className="box__body">
-                            <div className="region__img">
-                                <img src={ToshkentV} alt=""/>
-                                <span>502</span>
-                            </div>
-                            <div className="region__info">
-                                <p>javob berilgan <span className="text__blue">670</span></p>
-                                <p>navbatda <span className="text__blue">670</span></p>
-                                <p>nofaol <span className="text__blue">670</span></p>
-                                <p>yo'qotilgan <span className="text__blue">670</span></p>
-                                <p>Salomlashishda yo’qotilgan 40 <span className="text__blue">670</span></p>
-                                <p>Call back 10 <span className="text__blue">670</span></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="box">
-                        <h2>Xorazm viloyati</h2>
-                        <div className="box__body">
-                            <div className="region__img">
-                                <img src={Xorazm} alt=""/>
-                                <span>502</span>
-                            </div>
-                            <div className="region__info">
-                                <p>javob berilgan <span className="text__blue">670</span></p>
-                                <p>navbatda <span className="text__blue">670</span></p>
-                                <p>nofaol <span className="text__blue">670</span></p>
-                                <p>yo'qotilgan <span className="text__blue">670</span></p>
-                                <p>Salomlashishda yo’qotilgan 40 <span className="text__blue">670</span></p>
-                                <p>Call back 10 <span className="text__blue">670</span></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="box">
-                        <h2>Navoiy viloyati</h2>
-                        <div className="box__body">
-                            <div className="region__img">
-                                <img src={Navoiy} alt=""/>
-                                <span>560</span>
-                            </div>
-                            <div className="region__info">
-                                <p>javob berilgan <span className="text__blue">670</span></p>
-                                <p>navbatda <span className="text__blue">670</span></p>
-                                <p>nofaol <span className="text__blue">670</span></p>
-                                <p>yo'qotilgan <span className="text__blue">670</span></p>
-                                <p>Salomlashishda yo’qotilgan 40 <span className="text__blue">670</span></p>
-                                <p>Call back 10 <span className="text__blue">670</span></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="box">
-                        <h2>Namangan viloyati</h2>
-                        <div className="box__body">
-                            <div className="region__img">
-                                <img src={Namangan} alt=""/>
-                                <span>1051</span>
-                            </div>
-                            <div className="region__info">
-                                <p>javob berilgan <span className="text__blue">670</span></p>
-                                <p>navbatda <span className="text__blue">670</span></p>
-                                <p>nofaol <span className="text__blue">670</span></p>
-                                <p>yo'qotilgan <span className="text__blue">670</span></p>
-                                <p>Salomlashishda yo’qotilgan 40 <span className="text__blue">670</span></p>
-                                <p>Call back 10 <span className="text__blue">670</span></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="box">
-                        <h2>Samarqand viloyati</h2>
-                        <div className="box__body">
-                            <div className="region__img">
-                                <img src={Samarqand} alt=""/>
-                                <span>1257</span>
-                            </div>
-                            <div className="region__info">
-                                <p>javob berilgan <span className="text__blue">670</span></p>
-                                <p>navbatda <span className="text__blue">670</span></p>
-                                <p>nofaol <span className="text__blue">670</span></p>
-                                <p>yo'qotilgan <span className="text__blue">670</span></p>
-                                <p>Salomlashishda yo’qotilgan 40 <span className="text__blue">670</span></p>
-                                <p>Call back 10 <span className="text__blue">670</span></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="box">
-                        <h2>Farg'ona viloyati</h2>
-                        <div className="box__body">
-                            <div className="region__img">
-                                <img src={Fargona} alt=""/>
-                                <span>502</span>
-                            </div>
-                            <div className="region__info">
-                                <p>javob berilgan <span className="text__blue">670</span></p>
-                                <p>navbatda <span className="text__blue">670</span></p>
-                                <p>nofaol <span className="text__blue">670</span></p>
-                                <p>yo'qotilgan <span className="text__blue">670</span></p>
-                                <p>Salomlashishda yo’qotilgan 40 <span className="text__blue">670</span></p>
-                                <p>Call back 10 <span className="text__blue">670</span></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="box">
-                        <h2>Toshkent sh</h2>
-                        <div className="box__body">
-                            <div className="region__img">
-                                <img src={ToshkentSh} alt=""/>
-                                <span>502</span>
-                            </div>
-                            <div className="region__info">
-                                <p>javob berilgan <span className="text__blue">670</span></p>
-                                <p>navbatda <span className="text__blue">670</span></p>
-                                <p>nofaol <span className="text__blue">670</span></p>
-                                <p>yo'qotilgan <span className="text__blue">670</span></p>
-                                <p>Salomlashishda yo’qotilgan 40 <span className="text__blue">670</span></p>
-                                <p>Call back 10 <span className="text__blue">670</span></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="box">
-                        <h2>Sirdayo viloyati</h2>
-                        <div className="box__body">
-                            <div className="region__img">
-                                <img src={Sirdaryo} alt=""/>
-                                <span>254</span>
-                            </div>
-                            <div className="region__info">
-                                <p>javob berilgan <span className="text__blue">670</span></p>
-                                <p>navbatda <span className="text__blue">670</span></p>
-                                <p>nofaol <span className="text__blue">670</span></p>
-                                <p>yo'qotilgan <span className="text__blue">670</span></p>
-                                <p>Salomlashishda yo’qotilgan 40 <span className="text__blue">670</span></p>
-                                <p>Call back 10 <span className="text__blue">670</span></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="box">
-                        <h2>Surxondaryo viloyati</h2>
-                        <div className="box__body">
-                            <div className="region__img">
-                                <img src={Surhondaryo} alt=""/>
-                                <span>835</span>
-                            </div>
-                            <div className="region__info">
-                                <p>javob berilgan <span className="text__blue">670</span></p>
-                                <p>navbatda <span className="text__blue">670</span></p>
-                                <p>nofaol <span className="text__blue">670</span></p>
-                                <p>yo'qotilgan <span className="text__blue">670</span></p>
-                                <p>Salomlashishda yo’qotilgan 40 <span className="text__blue">670</span></p>
-                                <p>Call back 10 <span className="text__blue">670</span></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="box">
-                        <h2>Qashqadaryo viloyati</h2>
-                        <div className="box__body">
-                            <div className="region__img">
-                                <img src={Qashqadaryo} alt=""/>
-                                <span>1326</span>
-                            </div>
-                            <div className="region__info">
-                                <p>javob berilgan <span className="text__blue">670</span></p>
-                                <p>navbatda <span className="text__blue">670</span></p>
-                                <p>nofaol <span className="text__blue">670</span></p>
-                                <p>yo'qotilgan <span className="text__blue">670</span></p>
-                                <p>Salomlashishda yo’qotilgan 40 <span className="text__blue">670</span></p>
-                                <p>Call back 10 <span className="text__blue">670</span></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="box">
-                        <h2>Buxoro viloyati</h2>
-                        <div className="box__body">
-                            <div className="region__img">
-                                <img src={Buxoro} alt=""/>
-                                <span>1326</span>
-                            </div>
-                            <div className="region__info">
-                                <p>javob berilgan <span className="text__blue">670</span></p>
-                                <p>navbatda <span className="text__blue">670</span></p>
-                                <p>nofaol <span className="text__blue">670</span></p>
-                                <p>yo'qotilgan <span className="text__blue">670</span></p>
-                                <p>Salomlashishda yo’qotilgan 40 <span className="text__blue">670</span></p>
-                                <p>Call back 10 <span className="text__blue">670</span></p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
+            <FullRegion/>
         </div>
     )
 }

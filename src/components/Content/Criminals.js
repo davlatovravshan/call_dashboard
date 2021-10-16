@@ -66,59 +66,60 @@ import styles from './css/Criminals.module.scss'
 const Criminals = () => {
         return (
             <div>
-                <div className={styles.content__wrapper}>
-
-                    <div className={styles.content__left}   >
+                <div className={styles.content__wrappers}>
+                    <div className={styles.content__lefts}>
                         <div className={styles.content__cell}>
                             <div className={`${styles.content__card} ${styles.hover}`}>
                                 <div className={styles.card__top}>
                                     <img src={surface} alt="surface"/>
-
                                     <p>Jinoyatlar</p>
                                 </div>
 
                                 <div className={styles.card__item}>
                                     <p className={styles.name}>Kunlik </p>
-                                    <p className={styles.number}>21</p>
+                                    {/*todo KUNLIK*/}
+                                    <p className={styles.number}>723</p>
                                     <p className={`${styles.statistic} ${styles.red}`}>
-                                        <span>+3</span>
+                                        <span>+13</span>
                                         <img src={red_arrow} alt="red_arrow"/>
                                     </p>
                                 </div>
 
                                 <div className={styles.card__item}>
                                     <p className={styles.name}>Xaftalik </p>
-                                    <p className={styles.number}>209</p>
+                                    {/*todo XAFTALIK*/}
+                                    <p className={styles.number}>5115</p>
                                     <p className={`${styles.statistic} ${styles.green}`}>
-                                        <span>-3</span>
+                                        <span>-56</span>
                                         <img src={upload} alt="upload"/>
                                     </p>
                                 </div>
 
                                 <div className={styles.card__item}>
-                                    <p className={styles.name}>Oylik </p>
-                                    <p className={styles.number}>309</p>
+                                    <p className={styles.name}>Oylik</p>
+                                    {/*todo OYLIK*/}
+                                    <p className={styles.number}>21746</p>
                                     <p className={`${styles.statistic} ${styles.red}`}>
-                                        <span>+21</span>
+                                        <span>+126</span>
                                         <img src={red_arrow} alt="red_arrow"/>
                                     </p>
                                 </div>
 
                                 <div className={styles.card__item}>
-                                    <p className={styles.name}>Oylik </p>
-                                    <p className={styles.number}>1201</p>
+                                    <p className={styles.name}>Yillik </p>
+                                    {/*todo YILLIK*/}
+                                    <p className={styles.number}>157793</p>
                                     <p className={`${styles.statistic} ${styles.red}`}>
-                                        <span>+97</span>
+                                        <span>+965</span>
                                         <img src={red_arrow} alt="red_arrow"/>
                                     </p>
                                 </div>
-
 
                                 <div className={styles.hidden__card}>
                                     <div className={styles.card__main_iteam}>
                                         <p>
                                             <img src={paper} alt="paper"/>
-                                            <b>12</b>
+                                            <b>23</b>
                                         </p>
                                         <p className={styles.text}>UVK uyg’unlashtirilgan vaziyatlar kartochkasi</p>
                                     </div>
@@ -126,7 +127,7 @@ const Criminals = () => {
                                     <div className={styles.card__main_iteam}>
                                         <p>
                                             <img src={server} alt="server"/>
-                                            <b>12</b>
+                                            <b>15</b>
                                         </p>
                                         <p className={styles.text}>UVK uyg’unlashtirilgan vaziyatlar kartochkasi</p>
                                     </div>
@@ -134,7 +135,7 @@ const Criminals = () => {
                                     <div className={styles.card__main_iteam}>
                                         <p>
                                             <img src={server} alt="server"/>
-                                            <b>12</b>
+                                            <b>32</b>
                                         </p>
                                         <p className={styles.text}>UVK uyg’unlashtirilgan vaziyatlar kartochkasi</p>
                                     </div>
@@ -142,7 +143,7 @@ const Criminals = () => {
                                     <div className={styles.card__main_iteam}>
                                         <p>
                                             <img src={server} alt="server"/>
-                                            <b>12</b>
+                                            <b>41</b>
                                         </p>
                                         <p className={styles.text}>UVK uyg’unlashtirilgan vaziyatlar kartochkasi</p>
                                     </div>
@@ -158,7 +159,8 @@ const Criminals = () => {
 
                                 <div className={styles.card__item}>
                                     <p className={styles.name}>Kunlik </p>
-                                    <p className={styles.number}>21</p>
+                                    {/*todo KUNLIK*/}
+                                    <p className={styles.number}>18</p>
                                     <p className={`${styles.statistic} ${styles.red}`}>
                                         <span>+3</span>
                                         <img src={red_arrow} alt="red_arrow"/>
@@ -167,16 +169,18 @@ const Criminals = () => {
 
                                 <div className={styles.card__item}>
                                     <p className={styles.name}>Xaftalik </p>
-                                    <p className={styles.number}>209</p>
+                                    {/*todo XAFTALIK*/}
+                                    <p className={styles.number}>96</p>
                                     <p className={`${styles.statistic} ${styles.green}`}>
-                                        <span>-3</span>
+                                        <span>-4</span>
                                         <img src={upload} alt="upload"/>
                                     </p>
                                 </div>
 
                                 <div className={styles.card__item}>
                                     <p className={styles.name}>Oylik </p>
-                                    <p className={styles.number}>309</p>
+                                    {/*todo OYLIK*/}
+                                    <p className={styles.number}>452</p>
                                     <p className={`${styles.statistic} ${styles.red}`}>
                                         <span>+21</span>
                                         <img src={red_arrow} alt="red_arrow"/>
@@ -184,8 +188,9 @@ const Criminals = () => {
                                 </div>
 
                                 <div className={styles.card__item}>
-                                    <p className={styles.name}>Oylik </p>
-                                    <p className={styles.number}>1201</p>
+                                    <p className={styles.name}>Yillik </p>
+                                    {/*todo YILLIK*/}
+                                    <p className={styles.number}>1523</p>
                                     <p className={`${styles.statistic} ${styles.red}`}>
                                         <span>+97</span>
                                         <img src={red_arrow} alt="red_arrow"/>
@@ -217,7 +222,7 @@ const Criminals = () => {
                                         <div className={styles.card__main_iteam}>
                                             <p>
                                                 <img src={img2202} alt="img2202"/>
-                                                <b>30</b>
+                                                <b>15</b>
                                             </p>
                                             <p className={styles.text}>Og’ir tan jaroxati etkazish</p>
                                         </div>
@@ -233,16 +238,16 @@ const Criminals = () => {
                                         <div className={styles.card__main_iteam}>
                                             <p>
                                                 <img src={img2199} alt="img2199"/>
-                                                <b>12</b>
+                                                <b>5</b>
                                             </p>
                                             <p className={styles.text}>Qasddan
-                                                odam o’dirish</p>
+                                                odam o’ldirish</p>
                                         </div>
 
                                         <div className={styles.card__main_iteam}>
                                             <p>
                                                 <img src={img2391} alt="img2391"/>
-                                                <b>3</b>
+                                                <b>26</b>
                                             </p>
                                             <p className={styles.text}>Qasddan badanga og’ir shikast etkazish</p>
                                         </div>
@@ -278,7 +283,7 @@ const Criminals = () => {
                                         <div className={styles.card__main_iteam}>
                                             <p>
                                                 <img src={criminalCarrying} alt="criminalCarrying"/>
-                                                <b>2</b>
+                                                <b>23</b>
                                             </p>
                                             <p className={styles.text}>Talonchilik</p>
                                         </div>
@@ -299,14 +304,14 @@ const Criminals = () => {
                                         <div className={styles.card__main_iteam}>
                                             <p>
                                                 <img src={img7732} alt="img7732"/>
-                                                <b>12</b>
+                                                <b>85</b>
                                             </p>
                                             <p className={styles.text}>Tovlamachilik</p>
                                         </div>
                                         <div className={styles.card__main_iteam}>
                                             <p>
                                                 <img src={hacker} alt="hacker"/>
-                                                <b>12</b>
+                                                <b>42</b>
                                             </p>
                                             <p className={styles.text}>Hujjatlarni egallash qalbakilashtirish</p>
                                         </div>
@@ -323,7 +328,7 @@ const Criminals = () => {
 
                                 <div className={styles.card__item}>
                                     <p className={styles.name}>Kunlik </p>
-                                    <p className={styles.number}>21</p>
+                                    <p className={styles.number}>23</p>
                                     <p className={`${styles.statistic} ${styles.red}`}>
                                         <span>+3</span>
                                         <img src={red_arrow} alt="red_arrow"/>
@@ -332,28 +337,28 @@ const Criminals = () => {
 
                                 <div className={styles.card__item}>
                                     <p className={styles.name}>Xaftalik </p>
-                                    <p className={styles.number}>209</p>
+                                    <p className={styles.number}>152</p>
                                     <p className={`${styles.statistic} ${styles.green}`}>
-                                        <span>-3</span>
+                                        <span>-39</span>
                                         <img src={upload} alt="upload"/>
                                     </p>
                                 </div>
 
                                 <div className={styles.card__item}>
                                     <p className={styles.name}>Oylik </p>
-                                    <p className={styles.number}>309</p>
+                                    <p className={styles.number}>648</p>
                                     <p className={`${styles.statistic} ${styles.red}`}>
-                                        <span>+21</span>
+                                        <span>+216</span>
                                         <img src={red_arrow} alt="red_arrow"/>
                                     </p>
                                 </div>
 
                                 <div className={styles.card__item}>
-                                    <p className={styles.name}>Oylik </p>
-                                    <p className={styles.number}>1201</p>
-                                    <p className={`${styles.statistic} ${styles.red}`}>
-                                        <span>+97</span>
-                                        <img src={red_arrow} alt="red_arrow"/>
+                                    <p className={styles.name}>Yillik </p>
+                                    <p className={styles.number}>6230</p>
+                                    <p className={`${styles.statistic} ${styles.green}`}>
+                                        <span>-521</span>
+                                        <img src={upload} alt="red_arrow"/>
                                     </p>
                                 </div>
 
@@ -413,37 +418,37 @@ const Criminals = () => {
 
                                 <div className={styles.card__item}>
                                     <p className={styles.name}>Kunlik </p>
-                                    <p className={styles.number}>21</p>
+                                    <p className={styles.number}>14</p>
                                     <p className={`${styles.statistic} ${styles.red}`}>
-                                        <span>+3</span>
+                                        <span>+6</span>
                                         <img src={red_arrow} alt="red_arrow"/>
                                     </p>
                                 </div>
 
                                 <div className={styles.card__item}>
                                     <p className={styles.name}>Xaftalik </p>
-                                    <p className={styles.number}>209</p>
+                                    <p className={styles.number}>95</p>
                                     <p className={`${styles.statistic} ${styles.green}`}>
-                                        <span>-3</span>
+                                        <span>-2</span>
                                         <img src={upload} alt="upload"/>
                                     </p>
                                 </div>
 
                                 <div className={styles.card__item}>
                                     <p className={styles.name}>Oylik </p>
-                                    <p className={styles.number}>309</p>
+                                    <p className={styles.number}>329</p>
                                     <p className={`${styles.statistic} ${styles.red}`}>
-                                        <span>+21</span>
+                                        <span>+36</span>
                                         <img src={red_arrow} alt="red_arrow"/>
                                     </p>
                                 </div>
 
                                 <div className={styles.card__item}>
-                                    <p className={styles.name}>Oylik </p>
-                                    <p className={styles.number}>1201</p>
-                                    <p className={`${styles.statistic} ${styles.red}`}>
-                                        <span>+97</span>
-                                        <img src={red_arrow} alt="red_arrow"/>
+                                    <p className={styles.name}>Yillik </p>
+                                    <p className={styles.number}>1542</p>
+                                    <p className={`${styles.statistic} ${styles.green}`}>
+                                        <span>-101</span>
+                                        <img src={upload} alt="red_arrow"/>
                                     </p>
                                 </div>
 
@@ -491,36 +496,36 @@ const Criminals = () => {
 
                                 <div className={styles.card__item}>
                                     <p className={styles.name}>Kunlik </p>
-                                    <p className={styles.number}>21</p>
+                                    <p className={styles.number}>5</p>
                                     <p className={`${styles.statistic} ${styles.red}`}>
-                                        <span>+3</span>
+                                        <span>+1</span>
                                         <img src={red_arrow} alt="red_arrow"/>
                                     </p>
                                 </div>
 
                                 <div className={styles.card__item}>
                                     <p className={styles.name}>Xaftalik </p>
-                                    <p className={styles.number}>209</p>
+                                    <p className={styles.number}>32</p>
                                     <p className={`${styles.statistic} ${styles.green}`}>
-                                        <span>-3</span>
+                                        <span>-2</span>
                                         <img src={upload} alt="upload"/>
                                     </p>
                                 </div>
 
                                 <div className={styles.card__item}>
                                     <p className={styles.name}>Oylik </p>
-                                    <p className={styles.number}>309</p>
+                                    <p className={styles.number}>206</p>
                                     <p className={`${styles.statistic} ${styles.red}`}>
-                                        <span>+21</span>
+                                        <span>+26</span>
                                         <img src={red_arrow} alt="red_arrow"/>
                                     </p>
                                 </div>
 
                                 <div className={styles.card__item}>
-                                    <p className={styles.name}>Oylik </p>
-                                    <p className={styles.number}>1201</p>
+                                    <p className={styles.name}>Yillik </p>
+                                    <p className={styles.number}>2351</p>
                                     <p className={`${styles.statistic} ${styles.red}`}>
-                                        <span>+97</span>
+                                        <span>+89</span>
                                         <img src={red_arrow} alt="red_arrow"/>
                                     </p>
                                 </div>
@@ -545,7 +550,7 @@ const Criminals = () => {
                                     <div className={styles.card__main_iteam}>
                                         <p>
                                             <img src={sell} alt="sell"/>
-                                            <b>5</b>
+                                            <b>9</b>
                                         </p>
                                         <p className={styles.text}>Sotish</p>
                                     </div>
@@ -577,36 +582,36 @@ const Criminals = () => {
 
                                 <div className={styles.card__item}>
                                     <p className={styles.name}>Kunlik </p>
-                                    <p className={styles.number}>21</p>
+                                    <p className={styles.number}>17</p>
                                     <p className={`${styles.statistic} ${styles.red}`}>
-                                        <span>+3</span>
+                                        <span>+6</span>
                                         <img src={red_arrow} alt="red_arrow"/>
                                     </p>
                                 </div>
 
                                 <div className={styles.card__item}>
                                     <p className={styles.name}>Xaftalik </p>
-                                    <p className={styles.number}>209</p>
+                                    <p className={styles.number}>93</p>
                                     <p className={`${styles.statistic} ${styles.green}`}>
-                                        <span>-3</span>
+                                        <span>-10</span>
                                         <img src={upload} alt="upload"/>
                                     </p>
                                 </div>
 
                                 <div className={styles.card__item}>
                                     <p className={styles.name}>Oylik </p>
-                                    <p className={styles.number}>309</p>
+                                    <p className={styles.number}>453</p>
                                     <p className={`${styles.statistic} ${styles.red}`}>
-                                        <span>+21</span>
+                                        <span>+23</span>
                                         <img src={red_arrow} alt="red_arrow"/>
                                     </p>
                                 </div>
 
                                 <div className={styles.card__item}>
-                                    <p className={styles.name}>Oylik </p>
-                                    <p className={styles.number}>1201</p>
+                                    <p className={styles.name}>Yillik </p>
+                                    <p className={styles.number}>2531</p>
                                     <p className={`${styles.statistic} ${styles.red}`}>
-                                        <span>+97</span>
+                                        <span>+62</span>
                                         <img src={red_arrow} alt="red_arrow"/>
                                     </p>
                                 </div>
@@ -657,36 +662,36 @@ const Criminals = () => {
 
                                 <div className={styles.card__item}>
                                     <p className={styles.name}>Kunlik </p>
-                                    <p className={styles.number}>21</p>
+                                    <p className={styles.number}>26</p>
                                     <p className={`${styles.statistic} ${styles.red}`}>
-                                        <span>+3</span>
+                                        <span>+13</span>
                                         <img src={red_arrow} alt="red_arrow"/>
                                     </p>
                                 </div>
 
                                 <div className={styles.card__item}>
                                     <p className={styles.name}>Xaftalik </p>
-                                    <p className={styles.number}>209</p>
+                                    <p className={styles.number}>263</p>
                                     <p className={`${styles.statistic} ${styles.green}`}>
-                                        <span>-3</span>
+                                        <span>-9</span>
                                         <img src={upload} alt="upload"/>
                                     </p>
                                 </div>
 
                                 <div className={styles.card__item}>
                                     <p className={styles.name}>Oylik </p>
-                                    <p className={styles.number}>309</p>
+                                    <p className={styles.number}>852</p>
                                     <p className={`${styles.statistic} ${styles.red}`}>
-                                        <span>+21</span>
+                                        <span>+25</span>
                                         <img src={red_arrow} alt="red_arrow"/>
                                     </p>
                                 </div>
 
                                 <div className={styles.card__item}>
-                                    <p className={styles.name}>Oylik </p>
-                                    <p className={styles.number}>1201</p>
+                                    <p className={styles.name}>Yillik </p>
+                                    <p className={styles.number}>1642</p>
                                     <p className={`${styles.statistic} ${styles.red}`}>
-                                        <span>+97</span>
+                                        <span>+47</span>
                                         <img src={red_arrow} alt="red_arrow"/>
                                     </p>
                                 </div>
@@ -990,7 +995,7 @@ const Criminals = () => {
                                                 </g>
                                             </svg>
 
-                                            <b>12</b>
+                                            <b>59</b>
                                         </p>
 
                                         <p className={styles.text}>Jinoyat va xodisalar</p>
@@ -1037,7 +1042,7 @@ const Criminals = () => {
                                                 </g>
                                             </svg>
 
-                                            <b>30</b>
+                                            <b>263</b>
                                         </p>
 
                                         <p className={styles.text}>Ma’lumot <br/> so’rab</p>
@@ -1085,7 +1090,7 @@ const Criminals = () => {
                                                 </g>
                                             </svg>
 
-                                            <b>12</b>
+                                            <b>36</b>
                                         </p>
 
                                         <p className={styles.text}>Adashib tushgan</p>
@@ -1110,7 +1115,7 @@ const Criminals = () => {
                                                       transform="translate(-79.757)"/>
                                             </svg>
 
-                                            <b>3</b>
+                                            <b>26</b>
                                         </p>
 
                                         <p className={styles.text}>Jim <br/> turish</p>
@@ -1130,7 +1135,7 @@ const Criminals = () => {
                                                 </g>
                                             </svg>
 
-                                            <b>4</b>
+                                            <b>46</b>
                                         </p>
 
                                         <p className={styles.text}>Boshqa idoralarga taalluqli</p>
@@ -1198,7 +1203,7 @@ const Criminals = () => {
                                                 </g>
                                             </svg>
 
-                                            <b>6</b>
+                                            <b>34</b>
                                         </p>
 
                                         <p className={styles.text}>IIO faoliyati <br/> bilan bog’liq <br/> bo’lmagan</p>
@@ -1334,26 +1339,17 @@ const Criminals = () => {
 
                             <div className={styles.content__card} style={{
                                 width: "466px"
-                            }
-                            }
-                            >
-                                <
-                                    div
-                                    className={styles.card__top} style={{
+                            }}>
+                                <div className={styles.card__top} style={{
                                     backgroundColor: "#5C2D91"
-                                }
-                                }>
-                                    <
-                                        p> kuch
-                                        vositalar
-                                        safarbar
-                                        etildi < /p>
+                                }}>
+                                    <p> kuch va vositalar safarbar etildi < /p>
                                 </div>
 
                                 <div className={styles.card__main}>
                                     <div className={styles.card__main_iteam}>
                                         <p>
-                                            <b>12</b>
+                                            <b>23</b>
                                         </p>
 
                                         <p className={styles.text}>Tergov tezkor guruhi</p>
@@ -1379,7 +1375,7 @@ const Criminals = () => {
 
                                     <div className={styles.card__main_iteam}>
                                         <p>
-                                            <b>12</b>
+                                            <b>21</b>
                                         </p>
 
                                         <p className={styles.text}>Yo’l patrul xizmati</p>
@@ -1392,7 +1388,7 @@ const Criminals = () => {
 
                                     <div className={styles.card__main_iteam}>
                                         <p>
-                                            <b>30</b>
+                                            <b>64</b>
                                         </p>
 
                                         <p className={styles.text}>Profilaktika xizmati</p>
@@ -1405,7 +1401,7 @@ const Criminals = () => {
 
                                     <div className={styles.card__main_iteam}>
                                         <p>
-                                            <b>0</b>
+                                            <b>3</b>
                                         </p>
 
                                         <p className={styles.text}>Maxsus <br/> kuchlar</p>
@@ -1416,20 +1412,11 @@ const Criminals = () => {
                                         </div>
                                     </div>
 
-                                    <div className={styles.card__main_iteam} style={{backgroundColor: "#FFB936"}
-                                    }
-                                    >
-                                        <
-                                            p>
-                                            < b> 71 %
-                                            </b>
-                                        </p>
-
-                                        <p className={styles.text}>Ummiy SL - ko’rsatkichi</p>
+                                    <div className={styles.card__main_iteam} style={{backgroundColor: "#FFB936"}}>
+                                        <p><b> 71 %</b></p>
+                                        <p className={styles.text}>Umumiy SL - ko’rsatkichi</p>
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
 
@@ -1450,7 +1437,23 @@ const Criminals = () => {
                                                 <b>12</b>
                                             </p>
 
-                                            <p className={styles.text}>Tergov tezkor guruhi</p>
+                                            <p className={styles.text}>Ochilmagan jinoyatlar</p>
+                                        </div>
+
+                                        <div className={styles.card__main_iteam}>
+                                            <p>
+                                                <b>38</b>
+                                            </p>
+
+                                            <p className={styles.text}>Shundan fosh etildi</p>
+                                        </div>
+
+                                        <div className={styles.card__main_iteam}>
+                                            <p>
+                                                <b>91</b>
+                                            </p>
+
+                                            <p className={styles.text}>Qoldiq</p>
                                         </div>
 
                                         <div className={styles.card__main_iteam}>
@@ -1458,36 +1461,18 @@ const Criminals = () => {
                                                 <b>30</b>
                                             </p>
 
-                                            <p className={styles.text}>Post patrul xizmati</p>
+                                            <p className={styles.text}>Qidiruvdagilar ushlandi</p>
                                         </div>
 
                                         <div className={styles.card__main_iteam}>
                                             <p>
-                                                <b>12</b>
+                                                <b>1</b>
                                             </p>
 
-                                            <p className={styles.text}>Yo’l patrul xizmati</p>
-                                        </div>
-
-                                        <div className={styles.card__main_iteam}>
-                                            <p>
-                                                <b>30</b>
-                                            </p>
-
-                                            <p className={styles.text}>Profilaktika xizmati</p>
-                                        </div>
-
-                                        <div className={styles.card__main_iteam}>
-                                            <p>
-                                                <b>0</b>
-                                            </p>
-
-                                            <p className={styles.text}>Maxsus <br/> kuchlar</p>
+                                            <p className={styles.text}>Bedarak topildi</p>
                                         </div>
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
 
@@ -1580,12 +1565,10 @@ const Criminals = () => {
                                 </table>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
-        )
-            ;
+        );
     }
 ;
 

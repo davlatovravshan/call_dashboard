@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
+// import React, {useEffect, useState} from 'react';
 // import callOne from "../../assets/img/call1.svg";
 // import callTwo from "../../assets/img/call2.svg";
 // import callThree from "../../assets/img/call3.svg";
@@ -16,6 +17,7 @@ import phone7 from "../../assets/img/7.svg";
 import phone8 from "../../assets/img/8.svg";
 import phone9 from "../../assets/img/9.svg";
 import phone10 from "../../assets/img/10.svg";
+import {GlobalContext} from "../../context/globalContext";
 
 // const det = {
 //     "result": "success",
@@ -94,15 +96,17 @@ import phone10 from "../../assets/img/10.svg";
 //
 
 
-const OperatorInfoWatch = ({fullData, fullAgentData}) => {
+const OperatorInfoWatch = () => {
+    const {fullData} = useContext(GlobalContext);
 
     const [maxQueueWaitingDuration, setMaxQueueWaitingDuration] = useState(''); // <= ENG UZOQ KUTISH VAQTI
 
 
     useEffect(() => {
-        setMaxQueueWaitingDuration(fullData?.stat?.maxQueueWaitingDuration && new Date(fullData?.stat?.maxQueueWaitingDuration * 1000).toISOString().substring(11, 19))
+        setMaxQueueWaitingDuration(fullData[0]?.stat?.maxQueueWaitingDuration &&
+            new Date(fullData[0]?.stat?.maxQueueWaitingDuration * 1000).toISOString().substring(11, 19))
         // console.log(fullData?.stat?.acceptedSLCalls / (fullData?.stat?.distributedCalls - (fullData?.stat?.missedOnGreetingCalls + fullData?.stat?.shortCalls)).toString().substring(0, 4))
-    }, [fullData, fullAgentData])
+    }, [])
 
     function secondsToHms(d) {
         d = Number(d);
@@ -116,6 +120,9 @@ const OperatorInfoWatch = ({fullData, fullAgentData}) => {
         // return hDisplay + mDisplay + sDisplay;
         return h + ':' + m + ':' + s
     }
+
+    // console.log(secondsToHms((fullData[0]?.stat?.talkDuration + fullData[0]?.stat?.holdDuration + fullData[0]?.stat?.wrapUpDuration) /
+    //     fullData[0]?.stat?.acceptedCalls))
 
 
     return (
@@ -232,7 +239,7 @@ const OperatorInfoWatch = ({fullData, fullAgentData}) => {
                         </div>
                         <div className="item__info">
                             <p>Kutish Qo'ng'iroqlari</p>
-                            <span className="red">0</span>
+                            <span className="red">{fullData[0]?.stat?.currentQueueWaitingCalls || 0}</span>
                         </div>
                     </div>
 
@@ -242,7 +249,7 @@ const OperatorInfoWatch = ({fullData, fullAgentData}) => {
                         </div>
                         <div className="item__info">
                             <p>Ishlov qo’ng’roqlari</p>
-                            <span className="blue">00:03:05</span>
+                            <span className="blue">00:00:00</span>
                         </div>
                     </div>
 
@@ -252,7 +259,7 @@ const OperatorInfoWatch = ({fullData, fullAgentData}) => {
                         </div>
                         <div className="item__info">
                             <p>O'rtacha Navbat Vaqti</p>
-                            <span className="orange">00:03:05</span>
+                            <span className="orange">{fullData.length ? secondsToHms(fullData[0]?.stat?.queueWaitingDuration / fullData[0]?.stat?.queueWaitingCalls) : '00:00:00'}</span>
                         </div>
                     </div>
 
@@ -274,7 +281,9 @@ const OperatorInfoWatch = ({fullData, fullAgentData}) => {
                         </div>
                         <div className="item__info">
                             <p>O’rtacha qo’ng’iroq vaqti</p>
-                            <span className="red">0</span>
+                            <span className="red">{fullData[0]?.stat &&
+                            secondsToHms((fullData[0]?.stat?.talkDuration + fullData[0]?.stat?.holdDuration + fullData[0]?.stat?.wrapUpDuration) /
+                                fullData[0]?.stat?.acceptedCalls)}</span>
                         </div>
                     </div>
 
@@ -284,7 +293,7 @@ const OperatorInfoWatch = ({fullData, fullAgentData}) => {
                         </div>
                         <div className="item__info">
                             <p>Qo'ng'iroq davomiyligi</p>
-                            <span className="green">00:03:05</span>
+                            <span className="green">{secondsToHms(fullData[0]?.stat?.talkDuration)}</span>
                         </div>
                     </div>
 
@@ -307,7 +316,7 @@ const OperatorInfoWatch = ({fullData, fullAgentData}) => {
                         </div>
                         <div className="item__info">
                             <p>Eng uzoq kutish vaqti</p>
-                            <span className="red">00:00:21</span>
+                            <span className="red">{maxQueueWaitingDuration}</span>
                         </div>
                     </div>
 
@@ -317,7 +326,7 @@ const OperatorInfoWatch = ({fullData, fullAgentData}) => {
                         </div>
                         <div className="item__info">
                             <p>Qo’ng’iroqlarga javob berish vaqti</p>
-                            <span className="orange">00:03:05</span>
+                            <span className="orange">00:00:00</span>
                         </div>
                     </div>
 
@@ -327,7 +336,7 @@ const OperatorInfoWatch = ({fullData, fullAgentData}) => {
                         </div>
                         <div className="item__info">
                             <p>Call Back</p>
-                            <span className="red">00:03:05</span>
+                            <span className="red">00:00:00</span>
                         </div>
                     </div>
 

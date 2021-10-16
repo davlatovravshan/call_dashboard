@@ -1,0 +1,281 @@
+[
+  {
+    "name": "Наманган",
+    "year_all_criminal": {
+      "date_1_all": 27006,
+      "date_2_all": 0
+    },
+    "month_all_criminal": {
+      "date_1_all": 2998,
+      "date_2_all": 0
+    },
+    "week_all_criminal": {
+      "data_1_all": 710,
+      "data_2_all": 0
+    },
+    "days_all_criminal": {
+      "data_1_all": 100,
+      "data_2_all": 0
+    },
+    "year_all_criminal_type": {
+      "date_1_all": 27006,
+      "date_2_all": 0
+    },
+    "month_all_criminal_type": {
+      "date_1_all": 2998,
+      "date_2_all": 0
+    },
+    "week_all_criminal_type": {
+      "data_1_all": 710,
+      "data_2_all": 0
+    },
+    "days_all_criminal_type": {
+      "data_1_all": 100,
+      "data_2_all": 0
+    }
+  },
+  {
+    "name": "Фергана",
+    "year_all_criminal": {
+      "date_1_all": 31347,
+      "date_2_all": 0
+    },
+    "month_all_criminal": {
+      "date_1_all": 4478,
+      "date_2_all": 0
+    },
+    "week_all_criminal": {
+      "data_1_all": 1045,
+      "data_2_all": 0
+    },
+    "days_all_criminal": {
+      "data_1_all": 149,
+      "data_2_all": 0
+    },
+    "year_all_criminal_type": {
+      "date_1_all": 31347,
+      "date_2_all": 0
+    },
+    "month_all_criminal_type": {
+      "date_1_all": 4478,
+      "date_2_all": 0
+    },
+    "week_all_criminal_type": {
+      "data_1_all": 1045,
+      "data_2_all": 0
+    },
+    "days_all_criminal_type": {
+      "data_1_all": 149,
+      "data_2_all": 0
+    }
+  },
+  {
+    "name": "Таш область",
+    "year_all_criminal": {
+      "date_1_all": 11769,
+      "date_2_all": 0
+    },
+    "month_all_criminal": {
+      "date_1_all": 1681,
+      "date_2_all": 0
+    },
+    "week_all_criminal": {
+      "data_1_all": 406,
+      "data_2_all": 0
+    },
+    "days_all_criminal": {
+      "data_1_all": 56,
+      "data_2_all": 0
+    }
+  },
+  {
+    "name": "Андижан",
+    "year_all_criminal": {
+      "date_1_all": 19433,
+      "date_2_all": 0
+    },
+    "month_all_criminal": {
+      "date_1_all": 2160,
+      "date_2_all": 0
+    },
+    "week_all_criminal": {
+      "data_1_all": 511,
+      "data_2_all": 0
+    },
+    "days_all_criminal": {
+      "data_1_all": 72,
+      "data_2_all": 0
+    }
+  },
+  {
+    "name": "Джизак",
+    "year_all_criminal": {
+      "date_1_all": 7550,
+      "date_2_all": 0
+    },
+    "month_all_criminal": {
+      "date_1_all": 838,
+      "date_2_all": 0
+    },
+    "week_all_criminal": {
+      "data_1_all": 198,
+      "data_2_all": 0
+    },
+    "days_all_criminal": {
+      "data_1_all": 28,
+      "data_2_all": 0
+    }
+  },
+  {
+    "name": "Сурхандарья",
+    "year_all_criminal": {
+      "date_1_all": 3067,
+      "date_2_all": 0
+    },
+    "month_all_criminal": {
+      "date_1_all": 511,
+      "date_2_all": 0
+    },
+    "week_all_criminal": {
+      "data_1_all": 122,
+      "data_2_all": 0
+    },
+    "days_all_criminal": {
+      "data_1_all": 17,
+      "data_2_all": 0
+    }
+  },
+  {
+    "name": "Кашкадарья",
+    "year_all_criminal": {
+      "date_1_all": 7633,
+      "date_2_all": 0
+    },
+    "month_all_criminal": {
+      "date_1_all": 636,
+      "date_2_all": 0
+    },
+    "week_all_criminal": {
+      "data_1_all": 147,
+      "data_2_all": 0
+    },
+    "days_all_criminal": {
+      "data_1_all": 21,
+      "data_2_all": 0
+    }
+  },
+  {
+    "name": "Бухора",
+    "year_all_criminal": {
+      "date_1_all": 13066,
+      "date_2_all": 0
+    },
+    "month_all_criminal": {
+      "date_1_all": 1451,
+      "date_2_all": 0
+    },
+    "week_all_criminal": {
+      "data_1_all": 344,
+      "data_2_all": 0
+    },
+    "days_all_criminal": {
+      "data_1_all": 48,
+      "data_2_all": 0
+    }
+  },
+  {
+    "name": "Самарканд",
+    "year_all_criminal": {
+      "date_1_all": 5227,
+      "date_2_all": 0
+    },
+    "month_all_criminal": {
+      "date_1_all": 1045,
+      "date_2_all": 0
+    },
+    "week_all_criminal": {
+      "data_1_all": 237,
+      "data_2_all": 0
+    },
+    "days_all_criminal": {
+      "data_1_all": 35,
+      "data_2_all": 0
+    }
+  },
+  {
+    "name": "Хорезм",
+    "year_all_criminal": {
+      "date_1_all": 4856,
+      "date_2_all": 0
+    },
+    "month_all_criminal": {
+      "date_1_all": 971,
+      "date_2_all": 0
+    },
+    "week_all_criminal": {
+      "data_1_all": 231,
+      "data_2_all": 0
+    },
+    "days_all_criminal": {
+      "data_1_all": 32,
+      "data_2_all": 0
+    }
+  },
+  {
+    "name": "Сырдарья",
+    "year_all_criminal": {
+      "date_1_all": 977,
+      "date_2_all": 0
+    },
+    "month_all_criminal": {
+      "date_1_all": 163,
+      "date_2_all": 0
+    },
+    "week_all_criminal": {
+      "data_1_all": 41,
+      "data_2_all": 0
+    },
+    "days_all_criminal": {
+      "data_1_all": 5,
+      "data_2_all": 0
+    }
+  },
+  {
+    "name": "Навои",
+    "year_all_criminal": {
+      "date_1_all": 6588,
+      "date_2_all": 0
+    },
+    "month_all_criminal": {
+      "date_1_all": 2196,
+      "date_2_all": 0
+    },
+    "week_all_criminal": {
+      "data_1_all": 507,
+      "data_2_all": 0
+    },
+    "days_all_criminal": {
+      "data_1_all": 73,
+      "data_2_all": 0
+    }
+  },
+  {
+    "name": "МВД Республики Каракалп",
+    "year_all_criminal": {
+      "date_1_all": 10475,
+      "date_2_all": 0
+    },
+    "month_all_criminal": {
+      "date_1_all": 2618,
+      "date_2_all": 0
+    },
+    "week_all_criminal": {
+      "data_1_all": 616,
+      "data_2_all": 0
+    },
+    "days_all_criminal": {
+      "data_1_all": 87,
+      "data_2_all": 0
+    }
+  }
+]

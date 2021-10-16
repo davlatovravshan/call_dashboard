@@ -1,6 +1,6 @@
 import React from "react";
 import './css/saidbar.scss'
-import menuLogo from '../../assets/img/menu.svg'
+// import menuLogo from '../../assets/img/menu.svg'
 import location from '../../assets/img/location.svg'
 import phone from '../../assets/img/phone__saidbar.svg'
 import clock from '../../assets/img/clock__saidbar.svg'
@@ -23,6 +23,14 @@ const Saidbar = () => {
                         <li className="saidbar__menu-li">
                             <Link className="saidbar__menu-link" to={'/'}><img src={location} alt=""/><p>hududlar</p>
                             </Link>
+                            {/*<select>*/}
+                            {/*    <option value="">11111</option>*/}
+                            {/*    <option value="">11111</option>*/}
+                            {/*    <option value="">11111</option>*/}
+                            {/*    <option value="">11111</option>*/}
+                            {/*    <option value="">11111</option>*/}
+                            {/*    <option value="">11111</option>*/}
+                            {/*</select>*/}
                         </li>
                         <li className="saidbar__menu-li">
                             <Link className="saidbar__menu-link" to={'/sos'}><img src={phone} alt=""/><p>qo'ngirloqlar
@@ -41,7 +49,8 @@ const Saidbar = () => {
                             </Link>
                         </li>
                         <li className="saidbar__menu-li">
-                            <Link className="saidbar__menu-link" to={'/criminals'}><img src={handcuffs} alt=""/><p>jinoyatlar</p>
+                            <Link className="saidbar__menu-link" to={'/criminals'}><img src={handcuffs} alt=""/>
+                                <p>jinoyatlar</p>
                             </Link>
                         </li>
                     </ul>
