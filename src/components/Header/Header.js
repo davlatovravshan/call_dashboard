@@ -4,7 +4,7 @@ import {useLocation} from "react-router-dom";
 
 const Header = () => {
     const location = useLocation();
-    console.log(location)
+    // console.log(location)
     return (
         <div className="header__row">
             <div className="header__top">

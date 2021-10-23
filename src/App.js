@@ -1,17 +1,18 @@
-import React, {useContext} from "react";
-import './assets/css/main.scss'
-import Saidbar from './components/Saidbar/Saidbar'
-import Header from './components/Header/Header'
-import Sos from './components/Content/Sos'
-import Criminals from './components/Content/Criminals'
+import React, {useContext, useEffect} from "react";
+import './assets/css/main.scss';
+import Saidbar from './components/Saidbar/Saidbar';
+import Header from './components/Header/Header';
+import Sos from './components/Content/Sos';
+import Criminals from './components/Content/Criminals';
 import {GlobalContext} from "./context/globalContext";
 import {Switch, Route, Redirect} from 'react-router-dom';
 
 function App() {
-    const {fullData, getFullData} = useContext(GlobalContext);
+    const {getFunc} = useContext(GlobalContext);
 
-
-    if (!fullData.length) getFullData()
+    useEffect(() => {
+        getFunc()
+    }, [])
 
     return (
         <div className="container">

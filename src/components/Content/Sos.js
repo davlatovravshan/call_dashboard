@@ -49,6 +49,8 @@ import moment from "moment";
 import OthersChart from "../charts/OthersChart";
 import OperatorInfoWatch from "../operator/OperatorInfoWatch";
 import FullRegion from "../regionCards/FullRegion";
+import WeekChart from "../charts/WeekChart";
+import SimpleLineChart from "../charts/SimpleLineChart";
 
 const Sos = () => {
 
@@ -187,7 +189,8 @@ const Sos = () => {
                         </div>
                     </div>
                     <div className="week__chart">
-                        <img style={{width: '100%'}} src={wekkChart} alt=""/>
+                        <WeekChart/>
+                        {/*<img style={{width: '100%'}} src={wekkChart} alt=""/>*/}
                     </div>
                 </div>
                 <OperatorInfoCount/>
@@ -207,7 +210,8 @@ const Sos = () => {
                         </div>
                     </div>
                     <div className="week__chart">
-                        <img style={{width: '100%'}} src={chartRight} alt=""/>
+                        <SimpleLineChart/>
+                        {/*<img style={{width: '100%'}} src={chartRight} alt=""/>*/}
                     </div>
                 </div>
                 <OperatorInfoWatch/>

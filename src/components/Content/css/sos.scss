@@ -131,7 +131,7 @@
       background-color: #ffffff;
       border-radius: 26px;
       margin-top: 15px;
-      padding: 20px;
+      padding: 20px 10px 20px 10px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -189,6 +189,10 @@
             }
           }
         }
+      }
+
+      .week__chart {
+        height: 100vh;
       }
     }
 
@@ -385,6 +389,10 @@
 
         }
       }
+
+      .week__chart {
+        height: 100vh;
+      }
     }
 
     .phone__boxes {
@@ -549,6 +557,11 @@
     opacity: 1;
     transition: opacity .5s ease-in;
   }
+}
+
+.recharts-responsive-container {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 

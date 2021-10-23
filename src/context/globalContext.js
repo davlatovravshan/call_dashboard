@@ -9,15 +9,17 @@ export default function GlobalContextProvider(props) {
     const [fullData, setFullData] = useState([]);
     const [error, setError] = useState([]);
     const [open, setOpen] = useState(false);
+    const [monthData, setMonthData] = useState([]);
+    const [region, setRegion] = useState([]);
+
+
     console.log(error);
 
     const openItems = () => {
         setOpen(!open)
     }
 
-    const getFullData = async () => {
-        let startDate = moment(new Date()).format("YYYY-MM-DD")
-        let endDate = moment(new Date()).format("YYYY-MM-DD")
+    const getFullData = async (startDate = moment(new Date()).format("YYYY-MM-DD"), endDate = moment(new Date()).format("YYYY-MM-DD")) => {
         try {
             const res = await api.get('api/calls/stats', {
                 params: {
@@ -27,7 +29,7 @@ export default function GlobalContextProvider(props) {
                 }
             })
             const data = [];
-            res.data.map(i => {
+            res.data.forEach(i => {
                 if (i.id === 0) {
                     data.push({...i})
                 }
@@ -77,10 +79,50 @@ export default function GlobalContextProvider(props) {
             setError(e.message);
             setFullData(JSON.parse(localStorage.getItem('data')));
         }
-        setTimeout(() => getFullData(), 5000);
+        setTimeout(() => getFullData(), 5000 * 100);
     }
 
-    const values = {fullData, getFullData, openItems, open}
+    const getCallsHistory = async (regionId = 0) => {
+        try {
+            const response = await api.get('api/history/getCallsByMonth', {
+                params: {
+                    regionId
+                }
+            })
+            // console.log(response);
+            setMonthData(response.data);
+        } catch (e) {
+            setError(e.message)
+        }
+    }
+
+    const getRegionName = async () => {
+        if (region.length) return;
+        try {
+            const response = await api.get('/api/regions/getAllRegion');
+            setRegion(response.data)
+        } catch (e) {
+            setError(e.message)
+        }
+    }
+
+    const getDateById = (e) => {
+        console.log(e);
+    }
+
+
+    const getFunc = () => {
+        if (fullData.length) return
+        getFullData()
+        console.log('getFullData')
+
+        if (monthData.length) return;
+        getCallsHistory()
+        console.log('getCallsHistory')
+
+    }
+
+    const values = {fullData, monthData, openItems, open, getFunc, getRegionName, region, getDateById}
     return (
         <GlobalContext.Provider value={values}>
             {props.children}

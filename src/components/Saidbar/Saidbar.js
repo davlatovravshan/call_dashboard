@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import './css/saidbar.scss'
 // import menuLogo from '../../assets/img/menu.svg'
 import location from '../../assets/img/location.svg'
@@ -8,8 +8,10 @@ import people from '../../assets/img/people__saidbar.svg'
 import operator from '../../assets/img/operator__saidbar.svg'
 import handcuffs from '../../assets/img/handcuffs.svg'
 import {Link} from "react-router-dom";
+import {GlobalContext} from "../../context/globalContext";
 
 const Saidbar = () => {
+    const {getRegionName, region, getDateById} = useContext(GlobalContext);
     return (
         <div className="saidbar__row">
             <div className="saidbar__row-top">
@@ -23,15 +25,22 @@ const Saidbar = () => {
                         <li className="saidbar__menu-li">
                             <Link className="saidbar__menu-link" to={'/'}><img src={location} alt=""/><p>hududlar</p>
                             </Link>
-                            {/*<select>*/}
-                            {/*    <option value="">11111</option>*/}
-                            {/*    <option value="">11111</option>*/}
-                            {/*    <option value="">11111</option>*/}
-                            {/*    <option value="">11111</option>*/}
-                            {/*    <option value="">11111</option>*/}
-                            {/*    <option value="">11111</option>*/}
-                            {/*</select>*/}
+
                         </li>
+                        <li className="saidbar__menu-li">
+                            <select onClick={() => getRegionName()}
+                                    onChange={(e) => getDateById(e.target.value)}
+                            >
+                                <option disabled>Hududlar</option>
+                                <option value="0">Barchasi</option>
+                                {
+                                    region.length && region.map(i =>
+                                        <option value={i.id} key={i.id}>{i.name}</option>
+                                    )
+                                }
+                            </select>
+                        </li>
+
                         <li className="saidbar__menu-li">
                             <Link className="saidbar__menu-link" to={'/sos'}><img src={phone} alt=""/><p>qo'ngirloqlar
                                 xizmati</p></Link>
