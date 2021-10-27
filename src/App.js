@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import './assets/css/main.scss';
 import Saidbar from './components/Saidbar/Saidbar';
 import Header from './components/Header/Header';
@@ -9,6 +9,7 @@ import {Switch, Route, Redirect} from 'react-router-dom';
 
 function App() {
     const {getFunc} = useContext(GlobalContext);
+
 
     useEffect(() => {
         getFunc()

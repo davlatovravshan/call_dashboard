@@ -11,8 +11,10 @@ import Sirdaryo from "./Sirdaryo.svg";
 import Surhondaryo from "./Surhondaryo.svg";
 import Qashqadaryo from "./Qashqadaryo.svg";
 import Buxoro from "./Buxoro.svg";
+import uzb from "./map__small.svg";
 
 const img = {
+    uzb,
     Andijon,
     Buxoro,
     Fargona,

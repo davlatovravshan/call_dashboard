@@ -10,10 +10,12 @@ const ActiveRegionCard = () => {
             <div className="map__row">
                 <div className="map__info">
                     <div className="map__img">
-                        <img src={map} alt=""/>
+                        <div className="map__icon">
+                            <img src={fullData[0]?.im_g} alt=""/>
+                        </div>
                     </div>
                     <div className="map__button">
-                        <h3>respublika bo’yicha</h3>
+                        <h3>{fullData[0]?.name}</h3>
                         <span>{fullData[0]?.stat?.distributedCalls || 0}</span>
                         <div className="button" onClick={openItems}>
                             <img src={arrowDown} alt=""/>

@@ -52,10 +52,27 @@ import FullRegion from "../regionCards/FullRegion";
 import WeekChart from "../charts/WeekChart";
 import SimpleLineChart from "../charts/SimpleLineChart";
 
-const Sos = () => {
+const month = [
+    {value: 1, name: "Yanvar"},
+    {value: 2, name: "Fevral"},
+    {value: 3, name: "Mart"},
+    {value: 4, name: "Aprel"},
+    {value: 5, name: "May"},
+    {value: 6, name: "Iyun"},
+    {value: 7, name: "Iyul"},
+    {value: 8, name: "Avgust"},
+    {value: 9, name: "Sentabr"},
+    {value: 10, name: "Oktabr"},
+    {value: 11, name: "Noyabr"},
+    {value: 12, name: "Dekabr"},
+]
 
-    const {fullData} = useContext(GlobalContext);
+export const monthsNum = new Date().getMonth()
+
+const Sos = () => {
+    const {fullData, getDataByMonth} = useContext(GlobalContext);
     const [others, setOthers] = useState(0);
+
 
     useEffect(() => {
         let count = fullData[0]?.stat?.missedCalls + fullData[0]?.stat?.shortCalls + fullData[0]?.stat?.missedOnGreetingCalls
@@ -64,8 +81,6 @@ const Sos = () => {
 
     return (
         <div className="content__wrapper">
-
-
             <div className="row__left">
                 {/*-------------------------------------------------------------------*/}
                 <div className="circle__box">
@@ -174,18 +189,36 @@ const Sos = () => {
                     </div>
                 </div>
                 {/*-------------------------------------------------------------------*/}
-
                 <div className="week__statist">
                     <div className="week__header">
                         <div className="left__info">
-                            <p>Xaftalik statistika</p>
-                            <p className="blue__text">5901 <img src={upGreen} alt=""/></p>
+                            <p>Oylik statistika</p>
+                            {/*<p className="blue__text">5901 <img src={upGreen} alt=""/></p>*/}
                         </div>
                         <div className="right__info">
-                            <p>Iyul</p>
-                            <button type="submit">oylik</button>
-                            <button type="submit">xaftalik</button>
-                            <button type="submit">kunlik</button>
+                            <select onChange={(e) => getDataByMonth(Number(e.target.value))}>
+                                {month.map(i =>
+                                    i.value <= monthsNum ?
+                                        <option value={i.value} key={i.value}
+                                                selected={`${i.value === monthsNum ? 'selected' : ''}`}>{i.name}</option> : ''
+                                )}
+                                {/*<option value="1">Yanvar</option>*/}
+                                {/*<option value="2">Fevral</option>*/}
+                                {/*<option value="3">Mart</option>*/}
+                                {/*<option value="4">Aprel</option>*/}
+                                {/*<option value="5">May</option>*/}
+                                {/*<option value="6">Iyun</option>*/}
+                                {/*<option value="7">Iyul</option>*/}
+                                {/*<option value="8">Avgust</option>*/}
+                                {/*<option value="9" selected="selected">Sentabr</option>*/}
+                                {/*<option value="10">Oktabr</option>*/}
+                                {/*<option value="11">Noyabr</option>*/}
+                                {/*<option value="12">Dekabr</option>*/}
+                            </select>
+                            {/*<p>Iyul</p>*/}
+                            {/*<button type="submit">oylik</button>*/}
+                            {/*<button type="submit">xaftalik</button>*/}
+                            {/*<button type="submit">kunlik</button>*/}
                         </div>
                     </div>
                     <div className="week__chart">
@@ -202,7 +235,7 @@ const Sos = () => {
                     <div className="week__header">
                         <div className="left__info">
                             <p>Yillik hisobot</p>
-                            <p className="blue__text">217221 <img src={upGreen} alt=""/></p>
+                            {/*<p className="blue__text">217221 <img src={upGreen} alt=""/></p>*/}
                         </div>
                         <div className="right__info">
                             <p>Jami qo’ng’iroqlar <img src={redCricle} alt=""/></p>

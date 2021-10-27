@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {BarChart, Bar, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, XAxis, Line} from 'recharts';
 // import calsData from "../../history.json";
 import {GlobalContext} from "../../context/globalContext";
@@ -97,7 +97,11 @@ import {GlobalContext} from "../../context/globalContext";
 // ];
 
 const WeekChart = () => {
-    const {monthData} = useContext(GlobalContext);
+    const {monthDataByDate} = useContext(GlobalContext);
+    const [data, setDate] = useState([]);
+    useEffect(() => {
+        setDate(monthDataByDate)
+    }, [monthDataByDate])
     // const [dataRegions, setDataRegions] = useState([]);
     // console.log(dataRegions);
     //
@@ -173,20 +177,20 @@ const WeekChart = () => {
     //     setDataRegions([jan, feb, mar, apr, mey, jun, jul, avg, sep, okt, nov, deg]);
     // }, [])
     return (
-        <ResponsiveContainer width={"93%"} height="100%">
+        <ResponsiveContainer width={"94%"} height="100%">
             <BarChart
                 // width={804}
                 // height={300}
-                data={monthData}
-                barSize={12}
+                data={data}
+                barSize={5}
             >
                 <YAxis style={{fontSize: 14}}/>
-                <XAxis dataKey="name" height={17} style={{fontSize: 14}}/>
+                <XAxis dataKey="num" height={17} style={{fontSize: 14}}/>
                 <Tooltip offset={50} cursor={false} active={true} contentStyle={{borderRadius: '10px'}}/>
-                <CartesianGrid strokeDasharray="3 3"/>
+                <CartesianGrid strokeDasharray="2 2"/>
                 <Bar dataKey="received" name="Jami" fill="#FF0505" background={{fill: '#eeeeee'}}/>
                 <Bar dataKey="answered" name="Javob berilgan" fill="#004EA5" background={{fill: '#eeeeee'}}/>
-                {/*<Bar type="monotone" name="Yoqotilgan" dataKey="lost" stroke="#004EA5" background={{fill: '#eeeeee'}}/>*/}
+                <Bar name="Yoqotilgan" dataKey="lost" stroke="#004EA5" background={{fill: '#eeeeee'}}/>
             </BarChart>
         </ResponsiveContainer>
     );

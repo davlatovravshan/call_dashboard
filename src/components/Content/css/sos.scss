@@ -140,7 +140,7 @@
       .week__header {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
 
         .left__info {
           p {
@@ -159,11 +159,11 @@
           display: flex;
           align-items: center;
 
-          p {
+          select {
             font-size: 15px;
             font-weight: 600;
             color: #5C86E2;
-            margin: 0 20px 0 0;
+            margin: 0 15px 0 0;
             text-transform: uppercase;
           }
 
@@ -192,7 +192,7 @@
       }
 
       .week__chart {
-        height: 100vh;
+        height: 237px;
       }
     }
 
@@ -294,9 +294,16 @@
         display: flex;
 
         .map__img {
-          img {
-            width: 400px;
+          display: flex;
+          width: 400px;
+
+          .map__icon {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-content: center;
           }
+
         }
 
         .map__button {

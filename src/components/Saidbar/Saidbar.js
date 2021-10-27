@@ -1,17 +1,20 @@
 import React, {useContext} from "react";
 import './css/saidbar.scss'
 // import menuLogo from '../../assets/img/menu.svg'
-import location from '../../assets/img/location.svg'
+import loc from '../../assets/img/location.svg'
 import phone from '../../assets/img/phone__saidbar.svg'
 import clock from '../../assets/img/clock__saidbar.svg'
 import people from '../../assets/img/people__saidbar.svg'
 import operator from '../../assets/img/operator__saidbar.svg'
 import handcuffs from '../../assets/img/handcuffs.svg'
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import {GlobalContext} from "../../context/globalContext";
+import moment from "moment";
+import {monthsNum} from "../Content/Sos";
 
 const Saidbar = () => {
-    const {getRegionName, region, getDateById} = useContext(GlobalContext);
+    const {getRegionName, region, getFullData, getCallsHistory, getDataByMonth} = useContext(GlobalContext);
+    const location = useLocation()
     return (
         <div className="saidbar__row">
             <div className="saidbar__row-top">
@@ -22,25 +25,28 @@ const Saidbar = () => {
                 </div>
                 <div className="saidbar__menu">
                     <ul className="saidbar__menu-nav">
-                        <li className="saidbar__menu-li">
-                            <Link className="saidbar__menu-link" to={'/'}><img src={location} alt=""/><p>hududlar</p>
-                            </Link>
-
-                        </li>
-                        <li className="saidbar__menu-li">
-                            <select onClick={() => getRegionName()}
-                                    onChange={(e) => getDateById(e.target.value)}
-                            >
-                                <option disabled>Hududlar</option>
-                                <option value="0">Barchasi</option>
-                                {
-                                    region.length && region.map(i =>
-                                        <option value={i.id} key={i.id}>{i.name}</option>
-                                    )
-                                }
-                            </select>
-                        </li>
-
+                        {
+                            location.pathname === "/sos" ? <li className="saidbar__menu-li">
+                                <div className="saidbar__menu-link"><img src={loc} alt=""/>
+                                    <select onClick={() => getRegionName()}
+                                            onChange={(e) => {
+                                                getCallsHistory(parseInt(e.target.value))
+                                                getFullData(moment(new Date()).format("YYYY-MM-DD"),
+                                                    moment(new Date()).format("YYYY-MM-DD"), parseInt(e.target.value))
+                                                getDataByMonth(monthsNum)
+                                            }}
+                                    >
+                                        <option disabled>Hududlar</option>
+                                        <option value="0">Barchasi</option>
+                                        {
+                                            region.length && region.map(i =>
+                                                <option value={i.id} key={i.id}>{i.name}</option>
+                                            )
+                                        }
+                                    </select>
+                                </div>
+                            </li> : ''
+                        }
                         <li className="saidbar__menu-li">
                             <Link className="saidbar__menu-link" to={'/sos'}><img src={phone} alt=""/><p>qo'ngirloqlar
                                 xizmati</p></Link>

@@ -96,6 +96,18 @@
                 width: 25px;
                 height: 20px;
               }
+              select{
+                display: none;
+                background-color: transparent;
+                color: #FFFFFF;
+                margin-left: 20px;
+                border: none;
+                width: 105px;
+                outline: none;
+                option{
+                  color: #000000;
+                }
+              }
             }
 
             &:hover {
@@ -163,6 +175,9 @@
         .saidbar__menu-li {
           .saidbar__menu-link {
             p {
+              display: block !important;
+            }
+            select{
               display: block !important;
             }
           }
