@@ -76,7 +76,7 @@ export default function GlobalContextProvider(props) {
                         data.push({...i, im_g: img.Xorazm})
                         break
                     case 151:
-                        data.push({...i, im_g: img.Qashqadaryo})
+                        data.push({...i, im_g: img.Qorqalpoqiston})
                         break
                     case 161:
                         data.push({...i, im_g: img.Navoiy})

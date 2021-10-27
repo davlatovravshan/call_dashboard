@@ -132,7 +132,7 @@ const Sos = () => {
                     <div className="circle__box-line">
                         <div className="line">
                             <div className="title">
-                                <p>Nafaol</p>
+                                <p>Nofaol</p>
                             </div>
                             <div className="line__body">
                                 {/*<div className="progress">*/}

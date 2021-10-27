@@ -12,6 +12,7 @@ import Surhondaryo from "./Surhondaryo.svg";
 import Qashqadaryo from "./Qashqadaryo.svg";
 import Buxoro from "./Buxoro.svg";
 import uzb from "./map__small.svg";
+import Qorqalpoqiston from "./Qorqalpoqiston.svg";
 
 const img = {
     uzb,
@@ -27,7 +28,8 @@ const img = {
     ToshkentSh,
     Sirdaryo,
     Qashqadaryo,
-    Surhondaryo
+    Surhondaryo,
+    Qorqalpoqiston
 }
 
 export default img;

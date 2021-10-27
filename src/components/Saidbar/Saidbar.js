@@ -12,6 +12,9 @@ import {GlobalContext} from "../../context/globalContext";
 import moment from "moment";
 import {monthsNum} from "../Content/Sos";
 
+let activeRegion = 0
+console.log(activeRegion);
+
 const Saidbar = () => {
     const {getRegionName, region, getFullData, getCallsHistory, getDataByMonth} = useContext(GlobalContext);
     const location = useLocation()
@@ -34,13 +37,15 @@ const Saidbar = () => {
                                                 getFullData(moment(new Date()).format("YYYY-MM-DD"),
                                                     moment(new Date()).format("YYYY-MM-DD"), parseInt(e.target.value))
                                                 getDataByMonth(monthsNum)
+                                                activeRegion = parseInt(e.target.value)
                                             }}
                                     >
                                         <option disabled>Hududlar</option>
                                         <option value="0">Barchasi</option>
                                         {
                                             region.length && region.map(i =>
-                                                <option value={i.id} key={i.id}>{i.name}</option>
+                                                <option value={i.id} key={i.id}
+                                                        selected={activeRegion === i.id ? 'selected' : ''}>{i.name}</option>
                                             )
                                         }
                                     </select>

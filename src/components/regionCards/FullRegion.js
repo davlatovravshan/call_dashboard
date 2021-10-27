@@ -25,7 +25,7 @@ const FullRegion = () => {
                 <div className="close__icon" onClick={() => openItems()}>
                     <img src={delet} alt=""/>
                 </div>
-                <h1>Viloyatlar kesimida <span>statistic ma'lumotlar</span></h1>
+                <h1>Viloyatlar kesimida <span>statistik ma'lumotlar</span></h1>
                 <div className="region__boxes">
 
                     {
@@ -38,11 +38,14 @@ const FullRegion = () => {
                                         <span>{item.stat.distributedCalls}</span>
                                     </div>
                                     <div className="region__info">
-                                        <p>javob berilgan <span className="text__blue">{item.stat.acceptedCalls}</span></p>
-                                        <p>navbatda <span className="text__blue">{item.stat.currentQueueWaitingCalls}</span></p>
+                                        <p>javob berilgan <span className="text__blue">{item.stat.acceptedCalls}</span>
+                                        </p>
+                                        <p>navbatda <span
+                                            className="text__blue">{item.stat.currentQueueWaitingCalls}</span></p>
                                         <p>nofaol <span className="text__blue">{item.stat.shortCalls}</span></p>
                                         <p>yo'qotilgan <span className="text__blue">{item.stat.missedCalls}</span></p>
-                                        <p>Salomlashishda yo’qotilgan <span className="text__blue">{item.stat.missedOnGreetingCalls}</span></p>
+                                        <p>Salomlashishda yo’qotilgan <span
+                                            className="text__blue">{item.stat.missedOnGreetingCalls}</span></p>
                                         {/*<p>Call back 10 <span className="text__blue">670</span></p>*/}
                                     </div>
                                 </div>
