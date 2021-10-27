@@ -88,7 +88,7 @@ const Sos = () => {
                         <div className="items">
                             <TotalChart/>
                             <div className="items__info">
-                                <p className="number__info">{fullData[0]?.stat?.distributedCalls}</p>
+                                <p className="number__info">{fullData?.[0]?.stat?.distributedCalls}</p>
                                 <p className="number__text">Jami</p>
                             </div>
                             <img className="img__top" src={jami} alt=""/>
